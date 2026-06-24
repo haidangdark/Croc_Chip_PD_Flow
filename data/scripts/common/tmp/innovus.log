@@ -1,0 +1,560 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.10-p004_1, built Thu May 7 20:02:41 PDT 2020
+Options:	
+Date:		Wed Jul  2 11:58:25 2025
+Host:		ictc-eda-be-9-ldap (x86_64 w/Linux 5.14.0-570.21.1.el9_6.x86_64) (12cores*12cpus*QEMU Virtual CPU version 2.5+ 16384KB)
+OS:		Rocky Linux release 9.6 (Blue Onyx)
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+**WARN: (IMPOPT-801):	Genus executable not found in PATH. Install Genus, add the path to the genus executable in the PATH variable and rerun Innovus.
+Change the soft stacksize limit to 0.2%RAM (63 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> win off
+<CMD> setMultiCpuUsage -localCpu 32
+**WARN: (PRL-39):	Number of local CPUs specified (32) > Actual number of CPUs in the host (12). The lower value will be used.
+<CMD> restoreDesign /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/ pm32
+#% Begin load design ... (date=07/02 11:58:56, mem=683.4M)
+Set Default Input Pin Transition as 0.1 ps.
+Loading design 'pm32' saved by 'Innovus' '20.10-p004_1' on 'Mon Mar 10 09:59:29 2025'.
+% Begin Load MMMC data ... (date=07/02 11:58:57, mem=685.4M)
+% End Load MMMC data ... (date=07/02 11:58:57, total cpu=0:00:00.0, real=0:00:00.0, peak res=685.8M, current mem=685.8M)
+default_rc_corner
+
+Loading LEF file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_fd_sc_hd.tlef ...
+
+Loading LEF file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_fd_sc_hd.lef ...
+WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_fd_sc_hd.lef at line 18.
+Set DBUPerIGU to M1 pitch 460.
+
+Loading LEF file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_ef_io.lef ...
+WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_ef_io.lef at line 2.
+**ERROR: (IMPLF-24):	Pin 'VSSIO' defined multiple times in same cell 'sky130_ef_io__vssa_hvc_pad', pin geometry that defined after first occurrence will be skipped.
+
+Loading LEF file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_fd_io.lef ...
+WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_fd_io.lef at line 2.
+**ERROR: (IMPLF-24):	Pin 'vssio' defined multiple times in same cell 'sky130_fd_io__top_analog_pad', pin geometry that defined after first occurrence will be skipped.
+**ERROR: (IMPLF-24):	Pin 'vssio' defined multiple times in same cell 'sky130_fd_io__top_analog_pad', pin geometry that defined after first occurrence will be skipped.
+
+Loading LEF file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_ef_io.1.lef ...
+WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_ef_io.1.lef at line 2.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__bare_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__com_bus_slice_1um' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__com_bus_slice_5um' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__com_bus_slice_10um' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__com_bus_slice_20um' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__connect_vcchib_vccd_and_vswitch_vddio_slice_20um' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__corner_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__disconnect_vccd_slice_5um' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__disconnect_vdda_slice_5um' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__gpiov2_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__gpiov2_pad_wrapped' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__vccd_hvc_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vccd_hvc_pad' has been found in db, no extra pin 'VCCD_PAD' can be added for existing macro.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__vccd_lvc_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vccd_lvc_pad' has been found in db, no extra pin 'VCCD_PAD' can be added for existing macro.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__vdda_hvc_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vdda_hvc_pad' has been found in db, no extra pin 'VDDA_PAD' can be added for existing macro.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__vdda_lvc_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vdda_lvc_pad' has been found in db, no extra pin 'VDDA_PAD' can be added for existing macro.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__vddio_hvc_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vddio_hvc_pad' has been found in db, no extra pin 'VDDIO_PAD' can be added for existing macro.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__vddio_lvc_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vddio_lvc_pad' has been found in db, no extra pin 'VDDIO_PAD' can be added for existing macro.
+**ERROR: (IMPLF-24):	Pin 'VSSIO' defined multiple times in same cell 'sky130_ef_io__vssa_hvc_clamped_pad', pin geometry that defined after first occurrence will be skipped.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__vssa_hvc_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vssa_hvc_pad' has been found in db, no extra pin 'VSSA_PAD' can be added for existing macro.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__vssa_lvc_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vssa_lvc_pad' has been found in db, no extra pin 'VSSA_PAD' can be added for existing macro.
+**WARN: (IMPLF-58):	MACRO 'sky130_ef_io__vssd_hvc_pad' has been found in the database. Its content except DENSITY and PIN ANTENNA* data, and certain properties, will be ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-58' for more detail.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vssd_hvc_pad' has been found in db, no extra pin 'VSSD_PAD' can be added for existing macro.
+**WARN: (EMS-27):	Message (IMPLF-58) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vssd_lvc_pad' has been found in db, no extra pin 'VSSD_PAD' can be added for existing macro.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vssio_hvc_pad' has been found in db, no extra pin 'VSSIO_PAD' can be added for existing macro.
+**WARN: (IMPLF-209):	Cell 'sky130_ef_io__vssio_lvc_pad' has been found in db, no extra pin 'VSSIO_PAD' can be added for existing macro.
+
+Loading LEF file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_fd_io_core.lef ...
+WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_fd_io_core.lef at line 2.
+
+Loading LEF file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_ef_io_core.lef ...
+WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/libs/lef/sky130_ef_io_core.lef at line 2.
+**WARN: (IMPLF-61):	78 duplicated MACRO definitions have been found in the LEF file(s). Their content except DENSITY and PIN ANTENNA* data, and certain properties, have been ignored.
+Review the LEF files specified in the init_lef_file variable and remove redundant definitions.
+Type 'man IMPLF-61' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vssio_hvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vssio_hvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vssio_hvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vssio_hvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vssd_lvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vssd_lvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vssd_lvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vssd_lvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vssd_lvc_clamped3_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vssd_lvc_clamped3_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vssd_lvc_clamped3_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vssd_lvc_clamped3_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vssd_lvc_clamped2_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vssd_lvc_clamped2_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vssd_lvc_clamped2_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vssd_lvc_clamped2_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vssa_hvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vssa_hvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vssa_hvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vssa_hvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vddio_hvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vddio_hvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vddio_hvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vddio_hvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vdda_hvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vdda_hvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vdda_hvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vdda_hvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vccd_lvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vccd_lvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vccd_lvc_clamped_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vccd_lvc_clamped_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vccd_lvc_clamped3_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vccd_lvc_clamped3_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vccd_lvc_clamped3_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vccd_lvc_clamped3_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vccd_lvc_clamped2_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_A' in macro 'sky130_ef_io__vccd_lvc_clamped2_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (IMPLF-201):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vccd_lvc_clamped2_pad' has no ANTENNADIFFAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-201' for more detail.
+**WARN: (IMPLF-200):	Pin 'AMUXBUS_B' in macro 'sky130_ef_io__vccd_lvc_clamped2_pad' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+**WARN: (EMS-27):	Message (IMPLF-201) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (EMS-27):	Message (IMPLF-200) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+viaInitial starts at Wed Jul  2 11:58:59 2025
+viaInitial ends at Wed Jul  2 11:58:59 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat//viewDefinition.tcl
+Starting library reading in 'Multi-threaded flow' (with '12' threads)
+Reading sky130_wc timing library /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib.
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_8'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_6'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_4'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_bleeder_1'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__diode_2'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_8'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_6'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_4'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_3'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_12'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib)
+Read 428 cells in library sky130_fd_sc_hd__ss_100C_1v60.
+Library reading multithread flow ended.
+Starting library reading in 'Multi-threaded flow' (with '12' threads)
+Reading sky130_bc timing library /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib.
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_8'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_6'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_4'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__lpflow_bleeder_1'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__diode_2'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'sky130_fd_sc_hd__decap_8'. The cell will only be used for analysis. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+Message <TECHLIB-302> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 428 cells in library sky130_fd_sc_hd__ff_n40C_1v95.
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_1' and for pin 'CLK_N', with  related_pin 'CLK_N' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ff_n40C_1v95' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_1' in library 'sky130_fd_sc_hd__ss_100C_1v60'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_1' and for pin 'CLK_N', with  related_pin 'CLK_N' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ss_100C_1v60' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_1' in library 'sky130_fd_sc_hd__ff_n40C_1v95'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_1' and for pin 'RESET_B', with  related_pin 'RESET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ff_n40C_1v95' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_1' in library 'sky130_fd_sc_hd__ss_100C_1v60'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_1' and for pin 'RESET_B', with  related_pin 'RESET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ss_100C_1v60' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_1' in library 'sky130_fd_sc_hd__ff_n40C_1v95'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_1' and for pin 'SET_B', with  related_pin 'SET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ff_n40C_1v95' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_1' in library 'sky130_fd_sc_hd__ss_100C_1v60'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_1' and for pin 'SET_B', with  related_pin 'SET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ss_100C_1v60' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_1' in library 'sky130_fd_sc_hd__ff_n40C_1v95'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_2' and for pin 'CLK_N', with  related_pin 'CLK_N' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ff_n40C_1v95' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_2' in library 'sky130_fd_sc_hd__ss_100C_1v60'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_2' and for pin 'CLK_N', with  related_pin 'CLK_N' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ss_100C_1v60' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_2' in library 'sky130_fd_sc_hd__ff_n40C_1v95'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_2' and for pin 'RESET_B', with  related_pin 'RESET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ff_n40C_1v95' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_2' in library 'sky130_fd_sc_hd__ss_100C_1v60'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_2' and for pin 'RESET_B', with  related_pin 'RESET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ss_100C_1v60' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_2' in library 'sky130_fd_sc_hd__ff_n40C_1v95'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_2' and for pin 'SET_B', with  related_pin 'SET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ff_n40C_1v95' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_2' in library 'sky130_fd_sc_hd__ss_100C_1v60'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbn_2' and for pin 'SET_B', with  related_pin 'SET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ss_100C_1v60' is not defined in the cell 'sky130_fd_sc_hd__dfbbn_2' in library 'sky130_fd_sc_hd__ff_n40C_1v95'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbp_1' and for pin 'CLK', with  related_pin 'CLK' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ff_n40C_1v95' is not defined in the cell 'sky130_fd_sc_hd__dfbbp_1' in library 'sky130_fd_sc_hd__ss_100C_1v60'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbp_1' and for pin 'CLK', with  related_pin 'CLK' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ss_100C_1v60' is not defined in the cell 'sky130_fd_sc_hd__dfbbp_1' in library 'sky130_fd_sc_hd__ff_n40C_1v95'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbp_1' and for pin 'RESET_B', with  related_pin 'RESET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ff_n40C_1v95' is not defined in the cell 'sky130_fd_sc_hd__dfbbp_1' in library 'sky130_fd_sc_hd__ss_100C_1v60'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbp_1' and for pin 'RESET_B', with  related_pin 'RESET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ss_100C_1v60' is not defined in the cell 'sky130_fd_sc_hd__dfbbp_1' in library 'sky130_fd_sc_hd__ff_n40C_1v95'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbp_1' and for pin 'SET_B', with  related_pin 'SET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ff_n40C_1v95' is not defined in the cell 'sky130_fd_sc_hd__dfbbp_1' in library 'sky130_fd_sc_hd__ss_100C_1v60'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfbbp_1' and for pin 'SET_B', with  related_pin 'SET_B' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ss_100C_1v60' is not defined in the cell 'sky130_fd_sc_hd__dfbbp_1' in library 'sky130_fd_sc_hd__ff_n40C_1v95'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfrbp_1' and for pin 'CLK', with  related_pin 'CLK' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ff_n40C_1v95' is not defined in the cell 'sky130_fd_sc_hd__dfrbp_1' in library 'sky130_fd_sc_hd__ss_100C_1v60'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+**WARN: (TECHLIB-1442):	The timing arc defined for cell 'sky130_fd_sc_hd__dfrbp_1' and for pin 'CLK', with  related_pin 'CLK' and  timing_type 'min_pulse_width'  in library 'sky130_fd_sc_hd__ss_100C_1v60' is not defined in the cell 'sky130_fd_sc_hd__dfrbp_1' in library 'sky130_fd_sc_hd__ff_n40C_1v95'. (File /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib)
+Message <TECHLIB-1442> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Library reading multithread flow ended.
+*** End library_loading (cpu=0.12min, real=0.02min, mem=260.0M, fe_cpu=0.56min, fe_real=0.58min, fe_mem=951.6M) ***
+% Begin Load netlist data ... (date=07/02 11:59:00, mem=720.3M)
+*** Begin netlist parsing (mem=951.6M) ***
+Created 428 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Limiting the number of threads from 12 to 8.
+Reading verilogBinary netlist '/ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat/vbin/pm32.v.bin'
+Reading binary database version 2 in 8-threaded mode
+
+*** Memory Usage v#1 (Current mem = 960.648M, initial mem = 281.906M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=960.6M) ***
+% End Load netlist data ... (date=07/02 11:59:00, total cpu=0:00:00.1, real=0:00:00.0, peak res=735.2M, current mem=735.2M)
+Set top cell to pm32.
+Hooked 856 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell pm32 ...
+*** Netlist is unique.
+** info: there are 936 modules.
+** info: there are 895 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 969.062M, initial mem = 281.906M) ***
+*info: set bottom ioPad orient R0
+**WARN: (IMPFP-3961):	The techSite 'unithddbl' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Adjust met3 preferred direction offset from 0.34 to 0.17.
+Adjust met4 preferred direction offset from 0.46 to 0.23.
+Adjust met5 preferred direction offset from 1.7 to 0.17.
+Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Loading preference file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat//gui.pref.tcl ...
+**WARN: (IMPCK-8086):	The command setCTSMode is obsolete and will be removed in the next release. This command still works in this release, but by the next release you must transition to the CCOpt-based CTS flow.
+**WARN: The setCCOptMode/set_ccopt_mode command is obsolete and will be removed in a future release. This command still works in this release, but to avoid this warning and to ensure compatibility with future releases, transition to set_ccopt_property.
+**WARN: The setCCOptMode/set_ccopt_mode command is obsolete and will be removed in a future release. This command still works in this release, but to avoid this warning and to ensure compatibility with future releases, transition to set_ccopt_property.
+**WARN: The setCCOptMode/set_ccopt_mode command is obsolete and will be removed in a future release. This command still works in this release, but to avoid this warning and to ensure compatibility with future releases, transition to set_ccopt_property.
+#WARNING (NRIF-91) Option setNanoRouteMode -routeTopRoutingLayer is obsolete. It will continue to work for the current release. To ensure compatibility with future releases, use option setDesignMode -topRoutingLayer instead.
+**WARN: The setCCOptMode/set_ccopt_mode command is obsolete and will be removed in a future release. This command still works in this release, but to avoid this warning and to ensure compatibility with future releases, transition to set_ccopt_property.
+**WARN: The setCCOptMode/set_ccopt_mode command is obsolete and will be removed in a future release. This command still works in this release, but to avoid this warning and to ensure compatibility with future releases, transition to set_ccopt_property.
+**WARN: The setCCOptMode/set_ccopt_mode command is obsolete and will be removed in a future release. This command still works in this release, but to avoid this warning and to ensure compatibility with future releases, transition to set_ccopt_property.
+**WARN: (IMPPTN-867):	Found use of setPinAssignMode -maxLayer. This will continue to work in this release; however, it is recommended to use setDesignMode -topRoutingLayer instead.
+**WARN: (IMPPSP-1003):	Found use of 'setRouteMode -earlyGlobalMaxRouteLayer'. This will continue to work in this release; however, it is recommended to use 'setDesignMode -topRoutingLayer' instead.
+Change floorplan default-technical-site to 'unithd'.
+*Info: initialize multi-corner CTS.
+Total number of combinational cells: 329
+Total number of sequential cells: 68
+Total number of tristate cells: 13
+Total number of level shifter cells: 7
+Total number of power gating cells: 0
+Total number of isolation cells: 11
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+Total number of usable buffers: 15
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
+Total number of usable inverters: 16
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd3_1 sky130_fd_sc_hd__dlymetal6s6s_1 sky130_fd_sc_hd__dlymetal6s4s_1
+Total number of identified usable delay cells: 15
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+% Begin Load MMMC data ... (date=07/02 11:59:03, mem=943.1M)
+% End Load MMMC data ... (date=07/02 11:59:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=943.1M, current mem=943.1M)
+Reading floorplan file - /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat//pm32.fp.gz (mem = 1143.4M).
+% Begin Load floorplan data ... (date=07/02 11:59:03, mem=943.6M)
+*info: reset 1060 existing net BottomPreferredLayer and AvoidDetour
+Deleting old partition specification.
+Set FPlanBox to (0 0 103600 100640)
+**WARN: (IMPFP-3961):	The techSite 'unithddbl' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Adjust met3 preferred direction offset from 0.34 to 0.17.
+Adjust met4 preferred direction offset from 0.46 to 0.23.
+Adjust met5 preferred direction offset from 1.7 to 0.17.
+Generated pitch 3.66 in met5 is different from 3.4 defined in technology file in preferred direction.
+Generated pitch 0.69 in met4 is different from 0.92 defined in technology file in preferred direction.
+Generated pitch 0.61 in met3 is different from 0.68 defined in technology file in preferred direction.
+ ... processed partition successfully.
+Reading binary special route file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat//pm32.fp.spr.gz (Created by Innovus v20.10-p004_1 on Mon Mar 10 09:59:24 2025, version: 1)
+Ending "Read special route file" (total cpu=0:00:00.0, real=0:00:00.0, peak res=944.7M, current mem=944.7M)
+There are 5 nets with weight being set
+There are 5 nets with bottomPreferredRoutingLayer being set
+There are 5 nets with avoidDetour being set
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+% End Load floorplan data ... (date=07/02 11:59:03, total cpu=0:00:00.1, real=0:00:00.0, peak res=946.7M, current mem=946.7M)
+Reading congestion map file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat//pm32.route.congmap.gz ...
+% Begin Load SymbolTable ... (date=07/02 11:59:03, mem=947.0M)
+Suppress "**WARN ..." messages.
+Un-suppress "**WARN ..." messages.
+% End Load SymbolTable ... (date=07/02 11:59:04, total cpu=0:00:00.0, real=0:00:01.0, peak res=947.2M, current mem=947.2M)
+Loading place ...
+% Begin Load placement data ... (date=07/02 11:59:04, mem=947.2M)
+Reading placement file - /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat//pm32.place.gz.
+** Reading stdCellPlacement_binary (Created by Innovus v20.10-p004_1 on Mon Mar 10 09:59:24 2025, version# 2) ...
+Read Views for adaptive view pruning ...
+Read 0 views from Binary DB for adaptive view pruning
+*** Completed restorePlace (cpu=0:00:00.0 real=0:00:00.0 mem=1146.4M) ***
+Total net length = 1.452e+04 (9.975e+03 4.550e+03) (ext = 5.806e+03)
+% End Load placement data ... (date=07/02 11:59:04, total cpu=0:00:00.0, real=0:00:00.0, peak res=948.6M, current mem=948.6M)
+% Begin Load routing data ... (date=07/02 11:59:04, mem=948.7M)
+Reading routing file - /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat//pm32.route.gz.
+Reading Innovus routing data (Created by Innovus v20.10-p004_1 on Mon Mar 10 09:59:24 2025 Format: 20.1) ...
+*** Total 964 nets are successfully restored.
+*** Completed restoreRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1144.4M) ***
+% End Load routing data ... (date=07/02 11:59:04, total cpu=0:00:00.0, real=0:00:00.0, peak res=951.1M, current mem=950.2M)
+Loading Drc markers ...
+... 38 markers are loaded ...
+... 0 geometry drc markers are loaded ...
+... 0 antenna drc markers are loaded ...
+TAT_INFO: restoreCongMap REAL = 1 : CPU = 0 : MEM = 0.
+Reading property file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat//pm32.prop
+*** Completed restoreProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1149.4M) ***
+Reading dirtyarea snapshot file /ictc/teacher_data/ictc_mynguyen/Downloads/eFPGA---RTL-to-GDS-with-SKY130-main/UoM_eFPGA/common/SAVED/cts_opt.invs.dat//pm32.db.da.gz (Create by Innovus v20.10-p004_1 on Mon Mar 10 09:59:24 2025, version: 4).
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+**WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M1 and M2 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M2 and M3 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M3 and M4 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M4 and M5 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M5 and M6 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M1 is not defined in the cap table. Therefore, the LEF value 12.2 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M2 is not defined in the cap table. Therefore, the LEF value 0.125 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M3 is not defined in the cap table. Therefore, the LEF value 0.125 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M4 is not defined in the cap table. Therefore, the LEF value 0.047 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M5 is not defined in the cap table. Therefore, the LEF value 0.047 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M6 is not defined in the cap table. Therefore, the LEF value 0.0285 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+Summary of Active RC-Corners : 
+ 
+ Analysis View: func_view_wc
+    RC-Corner Name        : default_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+ 
+ Analysis View: func_view_bc
+    RC-Corner Name        : default_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Start generating vias ..
+#Skip building auto via since it is not turned on.
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Via generation completed.
+% Begin Load power constraints ... (date=07/02 11:59:06, mem=958.8M)
+'set_default_switching_activity' finished successfully.
+% End Load power constraints ... (date=07/02 11:59:06, total cpu=0:00:00.0, real=0:00:00.0, peak res=965.6M, current mem=965.6M)
+delay_tc delay_bc delay_wc
+% Begin load AAE data ... (date=07/02 11:59:06, mem=986.0M)
+**WARN: (IMPESI-3505):	setDelayCalMode -eng_copyNetPropToNewNet true (default=false) will be obsoleted along with its sgs2set equivalent.  This parameter will continue to be supported in the current release, but will be removed in the next major release of the software.
+AAE DB initialization (MEM=1210.98 CPU=0:00:00.0 REAL=0:00:00.0) 
+% End load AAE data ... (date=07/02 11:59:06, total cpu=0:00:00.4, real=0:00:00.0, peak res=993.4M, current mem=993.4M)
+Restoring CCOpt config...
+  Extracting original clock gating for clk...
+    clock_tree clk contains 170 sinks and 0 clock gates.
+    Extraction for clk complete.
+  Extracting original clock gating for clk done.
+  The skew group clk/func_mode_ideal_bc was created. It contains 170 sinks and 1 sources.
+  The skew group clk/func_mode_ideal_wc was created. It contains 170 sinks and 1 sources.
+  The skew group clk/func_mode_ideal_bc was created. It contains 170 sinks and 1 sources.
+Restoring CCOpt config done.
+Total number of combinational cells: 329
+Total number of sequential cells: 68
+Total number of tristate cells: 13
+Total number of level shifter cells: 7
+Total number of power gating cells: 0
+Total number of isolation cells: 11
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: sky130_fd_sc_hd__buf_1 sky130_fd_sc_hd__buf_12 sky130_fd_sc_hd__buf_16 sky130_fd_sc_hd__buf_2 sky130_fd_sc_hd__buf_4 sky130_fd_sc_hd__buf_6 sky130_fd_sc_hd__buf_8 sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_16 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8 sky130_fd_sc_hd__dlymetal6s2s_1 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__probe_p_8
+Total number of usable buffers: 15
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: sky130_fd_sc_hd__bufinv_16 sky130_fd_sc_hd__clkinv_1 sky130_fd_sc_hd__bufinv_8 sky130_fd_sc_hd__clkinv_16 sky130_fd_sc_hd__clkinv_2 sky130_fd_sc_hd__clkinv_4 sky130_fd_sc_hd__clkinv_8 sky130_fd_sc_hd__inv_1 sky130_fd_sc_hd__clkinvlp_2 sky130_fd_sc_hd__clkinvlp_4 sky130_fd_sc_hd__inv_12 sky130_fd_sc_hd__inv_16 sky130_fd_sc_hd__inv_2 sky130_fd_sc_hd__inv_4 sky130_fd_sc_hd__inv_6 sky130_fd_sc_hd__inv_8
+Total number of usable inverters: 16
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: sky130_fd_sc_hd__bufbuf_16 sky130_fd_sc_hd__bufbuf_8 sky130_fd_sc_hd__clkdlybuf4s15_1 sky130_fd_sc_hd__clkdlybuf4s15_2 sky130_fd_sc_hd__clkdlybuf4s18_1 sky130_fd_sc_hd__clkdlybuf4s18_2 sky130_fd_sc_hd__clkdlybuf4s25_1 sky130_fd_sc_hd__clkdlybuf4s50_1 sky130_fd_sc_hd__clkdlybuf4s25_2 sky130_fd_sc_hd__clkdlybuf4s50_2 sky130_fd_sc_hd__dlygate4sd2_1 sky130_fd_sc_hd__dlygate4sd1_1 sky130_fd_sc_hd__dlygate4sd3_1 sky130_fd_sc_hd__dlymetal6s6s_1 sky130_fd_sc_hd__dlymetal6s4s_1
+Total number of identified usable delay cells: 15
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version 20.10-p004_1. They will be removed in the next release. 
+timing_enable_default_delay_arc
+#% End load design ... (date=07/02 11:59:08, total cpu=0:00:10.9, real=0:00:12.0, peak res=1017.4M, current mem=999.1M)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+ERROR     IMPLF-24             4  Pin '%s' defined multiple times in same ...
+WARNING   IMPLF-58            78  MACRO '%s' has been found in the databas...
+WARNING   IMPLF-61             1  %d duplicated MACRO definitions have bee...
+WARNING   IMPLF-200          254  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPLF-201          178  Pin '%s' in macro '%s' has no ANTENNADIF...
+WARNING   IMPLF-209           12  Cell '%s' has been found in db, no extra...
+WARNING   IMPFP-3961           2  The techSite '%s' has no related standar...
+WARNING   IMPPTN-867           1  Found use of %s. This will continue to w...
+WARNING   IMPEXT-2766          6  The sheet resistance for layer %s is not...
+WARNING   IMPEXT-2773          6  The via resistance between layers %s and...
+WARNING   IMPCK-8086           1  The command %s is obsolete and will be r...
+WARNING   IMPESI-3505          1  setDelayCalMode -eng_%s (default=%s) wil...
+WARNING   IMPCTE-107           1  The following globals have been obsolete...
+WARNING   IMPPSP-1003          1  Found use of '%s'. This will continue to...
+WARNING   TECHLIB-302         24  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-1442       226  The timing arc defined for cell '%s' and...
+*** Message Summary: 792 warning(s), 4 error(s)
+
+<CMD> win
+<CMD> win
+<CMD> setLayerPreference node_layer -isVisible 0
+<CMD> zoomBox 99.96500 13.69700 104.16300 9.50000
+<CMD> zoomBox 99.40400 9.21300 104.39700 14.15100
+<CMD> zoomBox 94.89700 6.80400 106.15000 17.93300
+<CMD> fit
+<CMD> zoomBox 31.26300 3.60600 37.60900 -1.33000
+<CMD> fit
+<CMD> zoomBox 0.59000 100.73600 3.76300 96.68200
+<CMD> zoomBox -2.88900 96.15000 7.82700 100.91900
+<CMD> zoomBox -7.16200 91.70300 16.98800 102.45200
+<CMD> zoomOut
+<CMD> zoomOut
+<CMD> zoomBox -4.71500 71.50600 10.68900 64.88200
+<CMD> fit
+<CMD> zoomBox -5.22700 5.54500 21.74400 -2.91700
+<CMD> fit
+<CMD> zoomBox 98.77800 8.54200 105.83000 4.31100
+<CMD> selectInst WELLTAP_9
+<CMD> fit
+<CMD> deselectAll
+<CMD> selectInst _583_
+<CMD> deselectAll
+<CMD> selectInst WELLTAP_78
+<CMD> selectInstByCellName sky130_fd_sc_hd__tapvpwrvgnd_1
+<CMD> win
+<CMD> fit
+<CMD> highlight -index 1
+<CMD> deselectAll
+<CMD> win
+<CMD> fit
+<CMD> selectInst WELLTAP_18
+
+*** Memory Usage v#1 (Current mem = 1317.508M, initial mem = 281.906M) ***

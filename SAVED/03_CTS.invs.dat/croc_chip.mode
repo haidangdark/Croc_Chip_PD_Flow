@@ -1,0 +1,66 @@
+if {![namespace exists ::IMEX]} { namespace eval ::IMEX {} }
+set ::IMEX::dataVar [file dirname [file normalize [info script]]]
+set ::IMEX::libVar ${::IMEX::dataVar}/libs
+
+catch { setDesignMode -bottomRoutingLayer Metal1 }
+catch { setDesignMode -congEffort high }
+catch { setDesignMode -flowEffort standard }
+catch { setDesignMode -process 130 }
+catch { setDesignMode -topRoutingLayer Metal5 }
+catch { setAnalysisMode -analysisType onChipVariation }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation sdcControl }
+catch { setOptMode -activeHoldViews { func_view_bc } }
+catch { setOptMode -activeSetupViews { func_view_wc } }
+catch { setOptMode -addInstancePrefix ictc_preCTS_ }
+catch { setOptMode -autoSetupViews { func_view_wc} }
+catch { setOptMode -autoTDGRSetupViews { func_view_wc} }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -expExtremeCongestionAwareBuffering true }
+catch { setOptMode -fixDrc true }
+catch { setOptMode -optimizeFF true }
+catch { setOptMode -preserveAllSequential false }
+catch { setOptMode -setupTargetSlack 0 }
+catch { setOptMode -usefulSkew false }
+catch { setOptMode -usefulSkewCCOpt none }
+catch { setOptMode -usefulSkewPostRoute false }
+catch { setOptMode -usefulSkewPreCTS false }
+catch { setPathGroupOptions reg2reg -effortLevel high }
+catch { setPathGroupOptions reg2out -effortLevel low }
+catch { setPathGroupOptions reg2mem -effortLevel high }
+catch { setPathGroupOptions mem2reg -effortLevel high }
+catch { setPathGroupOptions in2reg -effortLevel low }
+catch { setPathGroupOptions in2out -effortLevel low }
+catch { setExtractRCMode  -layerIndependent 1 -engine preRoute -total_c_th 0 -relative_c_th 1 -coupling_c_th 0.4 -defViaCap true }
+catch { set_ccopt_mode -integration native }
+catch { set_ccopt_mode -is_mode_set_route_top_mask false }
+catch { set_ccopt_mode -is_mode_set_route_top_preferred_extra_space false }
+catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 38.400000}
+
+catch { setPlaceMode -place_opt_post_place_tcl ${::IMEX::libVar}/misc/place_opt_post_place.tcl }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { set_ccopt_mode -integration native }
+catch { set_ccopt_mode -is_mode_set_route_top_mask false }
+catch { set_ccopt_mode -is_mode_set_route_top_preferred_extra_space false }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -eng_copyNetPropToNewNet true }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setImportMode -discardFloatingVNets false }
+catch { setImportMode -keepEmptyModule true }
+catch { setTieHiLoMode -cell {{sg13g2_tiehi sg13g2_tielo}} }
+catch { setTieHiLoMode -createHierPort false }
+catch { setTieHiLoMode -honorDontTouch false }
+catch { setTieHiLoMode -maxFanout 10 }
+catch { setSIMode -separate_delta_delay_on_data true }
+catch { setAddStripeMode -stacked_via_bottom_layer TopMetal1 }
+catch { setAddStripeMode -stacked_via_top_layer TopMetal2 }
+catch { setAddStripeMode -stapling_nets_style side_to_side }
+catch { setEndCapMode -leftEdge sky130_fd_sc_hd__endcap }
+catch { setEndCapMode -prefix ENDCAP }
+catch { setEndCapMode -rightEdge sky130_fd_sc_hd__endcap }
+catch { setFPlanMode -defaultTechSite CoreSite }
+catch { setFPlanMode -maxIoHeight false }
+catch { setFPlanMode -powerRailLayer {} }

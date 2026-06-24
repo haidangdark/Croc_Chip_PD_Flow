@@ -1,0 +1,43 @@
+if {![namespace exists ::IMEX]} { namespace eval ::IMEX {} }
+set ::IMEX::dataVar [file dirname [file normalize [info script]]]
+set ::IMEX::libVar ${::IMEX::dataVar}/libs
+
+catch { setAnalysisMode -analysisType onChipVariation }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath false }
+catch { setAnalysisMode -clockPropagation forcedIdeal }
+catch { setOptMode -addInstancePrefix {} }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -fixDrc true }
+catch { setOptMode -optimizeFF true }
+catch { setOptMode -setupTargetSlack 0 }
+catch { setOptMode -usefulSkew false }
+catch { setOptMode -usefulSkewCCOpt none }
+catch { setOptMode -usefulSkewPostRoute false }
+catch { setOptMode -usefulSkewPreCTS false }
+catch { setExtractRCMode  -engine preRoute }
+catch { setPlaceMode -place_opt_post_place_tcl ${::IMEX::libVar}/misc/place_opt_post_place.tcl }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -eng_copyNetPropToNewNet true }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setImportMode -discardFloatingVNets false }
+catch { setImportMode -keepEmptyModule true }
+catch { setImportMode -timerMode false }
+catch { setSIMode -separate_delta_delay_on_data true }
+catch { setAddStripeMode -stacked_via_bottom_layer TopMetal1 }
+catch { setAddStripeMode -stacked_via_top_layer TopMetal2 }
+catch { setAddStripeMode -stapling_nets_style side_to_side }
+catch { setEndCapMode -leftEdge sky130_fd_sc_hd__endcap }
+catch { setEndCapMode -prefix ENDCAP }
+catch { setEndCapMode -rightEdge sky130_fd_sc_hd__endcap }
+catch { setEcoMode -batchMode false }
+catch { setEcoMode -honorDontTouch true }
+catch { setEcoMode -honorDontUse true }
+catch { setEcoMode -honorFixedNetWire true }
+catch { setEcoMode -honorFixedStatus true }
+catch { setEcoMode -refinePlace true }
+catch { setEcoMode -updateTiming true }
+catch { setFPlanMode -defaultTechSite CoreSite }
+catch { setFPlanMode -maxIoHeight false }
+catch { setFPlanMode -powerRailLayer {} }

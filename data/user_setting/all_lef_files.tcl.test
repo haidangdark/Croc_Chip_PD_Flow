@@ -1,0 +1,15 @@
+cp /ictc/teacher_data/ictc_thenguyen/00_PR/03_training/scripts/common/sg13g2_tech.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/00_PR/03_training/scripts/common/sg13g2_stdcell_weltap.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_2048x64_c2_bm_bist.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_4096x8_c3_bm_bist.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_4096x16_c3_bm_bist.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_64x64_c2_bm_bist.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_1024x16_c2_bm_bist.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_256x48_c2_bm_bist.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_1024x64_c2_bm_bist.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_1024x8_c2_bm_bist.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_256x64_c2_bm_bist.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_sram/lef/RM_IHPSG13_1P_512x64_c2_bm_bist.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_io/lef/sg13g2_io_notracks.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/pdk/ihp-sg13g2/libs.ref/sg13g2_io/lef/sg13g2_io.lef   .
+cp /ictc/teacher_data/ictc_thenguyen/croc/./ihp13/bondpad/lef/bondpad_70x70.lef   .

@@ -1,0 +1,694 @@
+Creating directory checkDesign.
+**WARN: (IMPREPO-205):	There are 1 Cells with missing PG PIN.
+**WARN: (IMPREPO-207):	There are 1 Cells dimensions not multiple integer of site.
+**WARN: (IMPREPO-210):	There are 30 Cells PG Pins with missing geometry.
+Begin checking placement ... (start mem=1468.4M, init mem=1468.4M)
+*info: Recommended don't use cell = 0           
+*info: Placed = 2              (Fixed = 2)
+*info: Unplaced = 34132       
+Placement Density:40.64%(574165/1412850)
+Placement Density (including fixed std cells):40.64%(574165/1412850)
+Finished checkPlace (total: cpu=0:00:00.2, real=0:00:01.0; vio checks: cpu=0:00:00.0, real=0:00:00.0; mem=1468.4M)
+############################################################################
+# Innovus Netlist Design Rule Check
+# Sat Jul  5 14:20:48 2025
+
+############################################################################
+Design: croc_chip
+
+------ Design Summary:
+Total Standard Cell Number   (cells) : 34132
+Total Block Cell Number      (cells) : 2
+Total I/O Pad Cell Number    (cells) : 64
+Total Standard Cell Area     ( um^2) : 574165.07
+Total Block Cell Area        ( um^2) : 186361.07
+Total I/O Pad Cell Area      ( um^2) : 921600.00
+
+------ Design Statistics:
+
+Number of Instances            : 34198
+Number of Non-uniquified Insts : 34197
+Number of Nets                 : 40173
+Average number of Pins per Net : 3.25
+Maximum number of Pins in Net  : 5002
+
+------ I/O Port summary
+
+Number of Primary I/O Ports    : 48
+Number of Input Ports          : 9
+Number of Output Ports         : 7
+Number of Bidirectional Ports  : 32
+Number of Power/Ground Ports   : 0
+Number of Floating Ports                     *: 0
+Number of Ports Connected to Multiple Pads   *: 0
+Number of Ports Connected to Core Instances   : 0
+
+------ Design Rule Checking:
+
+Number of Output Pins connect to Power/Ground *: 0
+Number of Insts with Input Pins tied together ?: 100
+Number of TieHi/Lo term nets not connected to instance's PG terms ?: 0
+Number of Input/InOut Floating Pins            : 0
+Number of Output Floating Pins                 : 0
+Number of Output Term Marked TieHi/Lo         *: 0
+
+**WARN: (IMPREPO-216):	There are 100 Instances with input pins tied together.
+Number of nets with tri-state drivers          : 32
+Number of nets with parallel drivers           : 0
+Number of nets with multiple drivers           : 0
+Number of nets with no driver (No FanIn)       : 0
+Number of Output Floating nets (No FanOut)     : 5291
+Number of High Fanout nets (>50)               : 10
+**WARN: (IMPREPO-227):	There are 10 High Fanout nets (>50).
+Checking for any assigns in the netlist...
+Assigns in module cve2_cs_registers$croc_chip.i_croc_soc.i_croc.i_core_wrap.i_ibex.cs_registers_i
+  csr_pmp_cfg_o_0_ _3288_
+  csr_pmp_cfg_o_1_ _3288_
+  csr_pmp_cfg_o_2_ _3288_
+  csr_pmp_cfg_o_3_ _3288_
+  csr_pmp_cfg_o_4_ _3288_
+  csr_pmp_cfg_o_5_ _3288_
+  csr_pmp_cfg_o_6_ _3288_
+  csr_pmp_cfg_o_7_ _3288_
+  csr_pmp_cfg_o_8_ _3288_
+  csr_pmp_cfg_o_9_ _3288_
+  csr_pmp_cfg_o_10_ _3288_
+  csr_pmp_cfg_o_11_ _3288_
+  csr_pmp_cfg_o_12_ _3288_
+  csr_pmp_cfg_o_13_ _3288_
+  csr_pmp_cfg_o_14_ _3288_
+  csr_pmp_cfg_o_15_ _3288_
+  csr_pmp_cfg_o_16_ _3288_
+  csr_pmp_cfg_o_17_ _3288_
+  csr_pmp_cfg_o_18_ _3288_
+  csr_pmp_cfg_o_19_ _3288_
+  csr_pmp_cfg_o_20_ _3288_
+  csr_pmp_cfg_o_21_ _3288_
+  csr_pmp_cfg_o_22_ _3288_
+  csr_pmp_cfg_o_23_ _3288_
+  csr_pmp_addr_o_0_ _3288_
+  csr_pmp_addr_o_1_ _3288_
+  csr_pmp_addr_o_2_ _3288_
+  csr_pmp_addr_o_3_ _3288_
+  csr_pmp_addr_o_4_ _3288_
+  csr_pmp_addr_o_5_ _3288_
+  csr_pmp_addr_o_6_ _3288_
+  csr_pmp_addr_o_7_ _3288_
+  csr_pmp_addr_o_8_ _3288_
+  csr_pmp_addr_o_9_ _3288_
+  csr_pmp_addr_o_10_ _3288_
+  csr_pmp_addr_o_11_ _3288_
+  csr_pmp_addr_o_12_ _3288_
+  csr_pmp_addr_o_13_ _3288_
+  csr_pmp_addr_o_14_ _3288_
+  csr_pmp_addr_o_15_ _3288_
+  csr_pmp_addr_o_16_ _3288_
+  csr_pmp_addr_o_17_ _3288_
+  csr_pmp_addr_o_18_ _3288_
+  csr_pmp_addr_o_19_ _3288_
+  csr_pmp_addr_o_20_ _3288_
+  csr_pmp_addr_o_21_ _3288_
+  csr_pmp_addr_o_22_ _3288_
+  csr_pmp_addr_o_23_ _3288_
+  csr_pmp_addr_o_24_ _3288_
+  csr_pmp_addr_o_25_ _3288_
+  csr_pmp_addr_o_26_ _3288_
+  csr_pmp_addr_o_27_ _3288_
+  csr_pmp_addr_o_28_ _3288_
+  csr_pmp_addr_o_29_ _3288_
+  csr_pmp_addr_o_30_ _3288_
+  csr_pmp_addr_o_31_ _3288_
+  csr_pmp_addr_o_32_ _3288_
+  csr_pmp_addr_o_33_ _3288_
+  csr_pmp_addr_o_34_ _3288_
+  csr_pmp_addr_o_35_ _3288_
+  csr_pmp_addr_o_36_ _3288_
+  csr_pmp_addr_o_37_ _3288_
+  csr_pmp_addr_o_38_ _3288_
+  csr_pmp_addr_o_39_ _3288_
+  csr_pmp_addr_o_40_ _3288_
+  csr_pmp_addr_o_41_ _3288_
+  csr_pmp_addr_o_42_ _3288_
+  csr_pmp_addr_o_43_ _3288_
+  csr_pmp_addr_o_44_ _3288_
+  csr_pmp_addr_o_45_ _3288_
+  csr_pmp_addr_o_46_ _3288_
+  csr_pmp_addr_o_47_ _3288_
+  csr_pmp_addr_o_48_ _3288_
+  csr_pmp_addr_o_49_ _3288_
+  csr_pmp_addr_o_50_ _3288_
+  csr_pmp_addr_o_51_ _3288_
+  csr_pmp_addr_o_52_ _3288_
+  csr_pmp_addr_o_53_ _3288_
+  csr_pmp_addr_o_54_ _3288_
+  csr_pmp_addr_o_55_ _3288_
+  csr_pmp_addr_o_56_ _3288_
+  csr_pmp_addr_o_57_ _3288_
+  csr_pmp_addr_o_58_ _3288_
+  csr_pmp_addr_o_59_ _3288_
+  csr_pmp_addr_o_60_ _3288_
+  csr_pmp_addr_o_61_ _3288_
+  csr_pmp_addr_o_62_ _3288_
+  csr_pmp_addr_o_63_ _3288_
+  csr_pmp_addr_o_64_ _3288_
+  csr_pmp_addr_o_65_ _3288_
+  csr_pmp_addr_o_66_ _3288_
+  csr_pmp_addr_o_67_ _3288_
+  csr_pmp_addr_o_68_ _3288_
+  csr_pmp_addr_o_69_ _3288_
+  csr_pmp_addr_o_70_ _3288_
+  csr_pmp_addr_o_71_ _3288_
+  csr_pmp_addr_o_72_ _3288_
+  csr_pmp_addr_o_73_ _3288_
+  csr_pmp_addr_o_74_ _3288_
+  csr_pmp_addr_o_75_ _3288_
+  csr_pmp_addr_o_76_ _3288_
+  csr_pmp_addr_o_77_ _3288_
+  csr_pmp_addr_o_78_ _3288_
+  csr_pmp_addr_o_79_ _3288_
+  csr_pmp_addr_o_80_ _3288_
+  csr_pmp_addr_o_81_ _3288_
+  csr_pmp_addr_o_82_ _3288_
+  csr_pmp_addr_o_83_ _3288_
+  csr_pmp_addr_o_84_ _3288_
+  csr_pmp_addr_o_85_ _3288_
+  csr_pmp_addr_o_86_ _3288_
+  csr_pmp_addr_o_87_ _3288_
+  csr_pmp_addr_o_88_ _3288_
+  csr_pmp_addr_o_89_ _3288_
+  csr_pmp_addr_o_90_ _3288_
+  csr_pmp_addr_o_91_ _3288_
+  csr_pmp_addr_o_92_ _3288_
+  csr_pmp_addr_o_93_ _3288_
+  csr_pmp_addr_o_94_ _3288_
+  csr_pmp_addr_o_95_ _3288_
+  csr_pmp_addr_o_96_ _3288_
+  csr_pmp_addr_o_97_ _3288_
+  csr_pmp_addr_o_98_ _3288_
+  csr_pmp_addr_o_99_ _3288_
+  csr_pmp_addr_o_100_ _3288_
+  csr_pmp_addr_o_101_ _3288_
+  csr_pmp_addr_o_102_ _3288_
+  csr_pmp_addr_o_103_ _3288_
+  csr_pmp_addr_o_104_ _3288_
+  csr_pmp_addr_o_105_ _3288_
+  csr_pmp_addr_o_106_ _3288_
+  csr_pmp_addr_o_107_ _3288_
+  csr_pmp_addr_o_108_ _3288_
+  csr_pmp_addr_o_109_ _3288_
+  csr_pmp_addr_o_110_ _3288_
+  csr_pmp_addr_o_111_ _3288_
+  csr_pmp_addr_o_112_ _3288_
+  csr_pmp_addr_o_113_ _3288_
+  csr_pmp_addr_o_114_ _3288_
+  csr_pmp_addr_o_115_ _3288_
+  csr_pmp_addr_o_116_ _3288_
+  csr_pmp_addr_o_117_ _3288_
+  csr_pmp_addr_o_118_ _3288_
+  csr_pmp_addr_o_119_ _3288_
+  csr_pmp_addr_o_120_ _3288_
+  csr_pmp_addr_o_121_ _3288_
+  csr_pmp_addr_o_122_ _3288_
+  csr_pmp_addr_o_123_ _3288_
+  csr_pmp_addr_o_124_ _3288_
+  csr_pmp_addr_o_125_ _3288_
+  csr_pmp_addr_o_126_ _3288_
+  csr_pmp_addr_o_127_ _3288_
+  csr_pmp_addr_o_128_ _3288_
+  csr_pmp_addr_o_129_ _3288_
+  csr_pmp_addr_o_130_ _3288_
+  csr_pmp_addr_o_131_ _3288_
+  csr_pmp_addr_o_132_ _3288_
+  csr_pmp_addr_o_133_ _3288_
+  csr_pmp_addr_o_134_ _3288_
+  csr_pmp_addr_o_135_ _3288_
+  csr_pmp_mseccfg_o_0_ _3288_
+  csr_pmp_mseccfg_o_1_ _3288_
+  csr_pmp_mseccfg_o_2_ _3288_
+Assigns in module core_wrap$croc_chip.i_croc_soc.i_croc.i_core_wrap
+  data_addr_o_0_ _4950_
+  data_addr_o_1_ _4950_
+  instr_addr_o_0_ _4950_
+  instr_addr_o_1_ _4950_
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
+  data_o_1_ async_data_i_1_
+  data_o_0_ async_data_i_0_
+  ack_dst_q async_ack_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
+  req_src_q async_req_o
+  data_src_q_1_ async_data_o_1_
+  data_src_q_0_ async_data_o_0_
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
+  ack_dst_q async_ack_o
+  data_o_0_ async_data_i_0_
+  data_o_1_ async_data_i_1_
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
+  req_src_q async_req_o
+  data_src_q_1_ async_data_o_1_
+  data_src_q_0_ async_data_o_0_
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst.i_sync
+  reg_q_2_ serial_o
+Assigns in module cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_dst
+  data_dst_q_9_ data_o_9_
+  data_dst_q_8_ data_o_8_
+  data_dst_q_7_ data_o_7_
+  data_dst_q_6_ data_o_6_
+  data_dst_q_5_ data_o_5_
+  data_dst_q_4_ data_o_4_
+  data_dst_q_40_ data_o_40_
+  data_dst_q_3_ data_o_3_
+  data_dst_q_39_ data_o_39_
+  data_dst_q_38_ data_o_38_
+  data_dst_q_37_ data_o_37_
+  data_dst_q_36_ data_o_36_
+  data_dst_q_35_ data_o_35_
+  data_dst_q_34_ data_o_34_
+  data_dst_q_33_ data_o_33_
+  data_dst_q_32_ data_o_32_
+  data_dst_q_31_ data_o_31_
+  data_dst_q_30_ data_o_30_
+  data_dst_q_2_ data_o_2_
+  data_dst_q_29_ data_o_29_
+  data_dst_q_28_ data_o_28_
+  data_dst_q_27_ data_o_27_
+  data_dst_q_26_ data_o_26_
+  data_dst_q_25_ data_o_25_
+  data_dst_q_24_ data_o_24_
+  data_dst_q_23_ data_o_23_
+  data_dst_q_22_ data_o_22_
+  data_dst_q_21_ data_o_21_
+  data_dst_q_20_ data_o_20_
+  data_dst_q_1_ data_o_1_
+  data_dst_q_19_ data_o_19_
+  data_dst_q_18_ data_o_18_
+  data_dst_q_17_ data_o_17_
+  data_dst_q_16_ data_o_16_
+  data_dst_q_15_ data_o_15_
+  data_dst_q_14_ data_o_14_
+  data_dst_q_13_ data_o_13_
+  data_dst_q_12_ data_o_12_
+  data_dst_q_11_ data_o_11_
+  data_dst_q_10_ data_o_10_
+  data_dst_q_0_ data_o_0_
+  ack_dst_q async_ack_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src.i_sync
+  reg_q_2_ serial_o
+Assigns in module cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_req.i_src
+  req_src_q async_req_o
+  data_src_q_9_ async_data_o_9_
+  data_src_q_8_ async_data_o_8_
+  data_src_q_7_ async_data_o_7_
+  data_src_q_6_ async_data_o_6_
+  data_src_q_5_ async_data_o_5_
+  data_src_q_4_ async_data_o_4_
+  data_src_q_40_ async_data_o_40_
+  data_src_q_3_ async_data_o_3_
+  data_src_q_39_ async_data_o_39_
+  data_src_q_38_ async_data_o_38_
+  data_src_q_37_ async_data_o_37_
+  data_src_q_36_ async_data_o_36_
+  data_src_q_35_ async_data_o_35_
+  data_src_q_34_ async_data_o_34_
+  data_src_q_33_ async_data_o_33_
+  data_src_q_32_ async_data_o_32_
+  data_src_q_31_ async_data_o_31_
+  data_src_q_30_ async_data_o_30_
+  data_src_q_2_ async_data_o_2_
+  data_src_q_29_ async_data_o_29_
+  data_src_q_28_ async_data_o_28_
+  data_src_q_27_ async_data_o_27_
+  data_src_q_26_ async_data_o_26_
+  data_src_q_25_ async_data_o_25_
+  data_src_q_24_ async_data_o_24_
+  data_src_q_23_ async_data_o_23_
+  data_src_q_22_ async_data_o_22_
+  data_src_q_21_ async_data_o_21_
+  data_src_q_20_ async_data_o_20_
+  data_src_q_1_ async_data_o_1_
+  data_src_q_19_ async_data_o_19_
+  data_src_q_18_ async_data_o_18_
+  data_src_q_17_ async_data_o_17_
+  data_src_q_16_ async_data_o_16_
+  data_src_q_15_ async_data_o_15_
+  data_src_q_14_ async_data_o_14_
+  data_src_q_13_ async_data_o_13_
+  data_src_q_12_ async_data_o_12_
+  data_src_q_11_ async_data_o_11_
+  data_src_q_10_ async_data_o_10_
+  data_src_q_0_ async_data_o_0_
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst.i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_dst
+  data_o_1_ async_data_i_1_
+  data_o_0_ async_data_i_0_
+  ack_dst_q async_ack_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src.i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_a.i_state_transition_cdc_src
+  req_src_q async_req_o
+  data_src_q_1_ async_data_o_1_
+  data_src_q_0_ async_data_o_0_
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst.i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_dst$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_dst
+  data_o_1_ async_data_i_1_
+  data_o_0_ async_data_i_0_
+  ack_dst_q async_ack_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src.i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_src$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_cdc_reset_ctrlr.i_cdc_reset_ctrlr_half_b.i_state_transition_cdc_src
+  req_src_q async_req_o
+  data_src_q_1_ async_data_o_1_
+  data_src_q_0_ async_data_o_0_
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst.i_sync
+  reg_q_2_ serial_o
+Assigns in module cdc_2phase_dst_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_dst
+  data_dst_q_9_ data_o_9_
+  data_dst_q_8_ data_o_8_
+  data_dst_q_7_ data_o_7_
+  data_dst_q_6_ data_o_6_
+  data_dst_q_5_ data_o_5_
+  data_dst_q_4_ data_o_4_
+  data_dst_q_3_ data_o_3_
+  data_dst_q_33_ data_o_33_
+  data_dst_q_32_ data_o_32_
+  data_dst_q_31_ data_o_31_
+  data_dst_q_30_ data_o_30_
+  data_dst_q_2_ data_o_2_
+  data_dst_q_29_ data_o_29_
+  data_dst_q_28_ data_o_28_
+  data_dst_q_27_ data_o_27_
+  data_dst_q_26_ data_o_26_
+  data_dst_q_25_ data_o_25_
+  data_dst_q_24_ data_o_24_
+  data_dst_q_23_ data_o_23_
+  data_dst_q_22_ data_o_22_
+  data_dst_q_21_ data_o_21_
+  data_dst_q_20_ data_o_20_
+  data_dst_q_1_ data_o_1_
+  data_dst_q_19_ data_o_19_
+  data_dst_q_18_ data_o_18_
+  data_dst_q_17_ data_o_17_
+  data_dst_q_16_ data_o_16_
+  data_dst_q_15_ data_o_15_
+  data_dst_q_14_ data_o_14_
+  data_dst_q_13_ data_o_13_
+  data_dst_q_12_ data_o_12_
+  data_dst_q_11_ data_o_11_
+  data_dst_q_10_ data_o_10_
+  data_dst_q_0_ data_o_0_
+  ack_dst_q async_ack_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src.i_sync
+  reg_q_2_ serial_o
+Assigns in module cdc_2phase_src_clearable$croc_chip.i_croc_soc.i_croc.i_dmi_jtag.i_dmi_cdc.i_cdc_resp.i_src
+  req_src_q async_req_o
+  data_src_q_9_ async_data_o_9_
+  data_src_q_8_ async_data_o_8_
+  data_src_q_7_ async_data_o_7_
+  data_src_q_6_ async_data_o_6_
+  data_src_q_5_ async_data_o_5_
+  data_src_q_4_ async_data_o_4_
+  data_src_q_3_ async_data_o_3_
+  data_src_q_33_ async_data_o_33_
+  data_src_q_32_ async_data_o_32_
+  data_src_q_31_ async_data_o_31_
+  data_src_q_30_ async_data_o_30_
+  data_src_q_2_ async_data_o_2_
+  data_src_q_29_ async_data_o_29_
+  data_src_q_28_ async_data_o_28_
+  data_src_q_27_ async_data_o_27_
+  data_src_q_26_ async_data_o_26_
+  data_src_q_25_ async_data_o_25_
+  data_src_q_24_ async_data_o_24_
+  data_src_q_23_ async_data_o_23_
+  data_src_q_22_ async_data_o_22_
+  data_src_q_21_ async_data_o_21_
+  data_src_q_20_ async_data_o_20_
+  data_src_q_1_ async_data_o_1_
+  data_src_q_19_ async_data_o_19_
+  data_src_q_18_ async_data_o_18_
+  data_src_q_17_ async_data_o_17_
+  data_src_q_16_ async_data_o_16_
+  data_src_q_15_ async_data_o_15_
+  data_src_q_14_ async_data_o_14_
+  data_src_q_13_ async_data_o_13_
+  data_src_q_12_ async_data_o_12_
+  data_src_q_11_ async_data_o_11_
+  data_src_q_10_ async_data_o_10_
+  data_src_q_0_ async_data_o_0_
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[0].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[10].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[11].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[12].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[13].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[14].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[15].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[16].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[17].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[18].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[19].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[1].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[20].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[21].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[22].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[23].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[24].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[25].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[26].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[27].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[28].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[29].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[2].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[30].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[31].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[3].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[4].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[5].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[6].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[7].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[8].i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip.i_croc_soc.i_croc.i_gpio.gen_gpios[9].i_sync
+  reg_q_1_ serial_o
+Assigns in module gpio$croc_chip.i_croc_soc.i_croc.i_gpio
+  obi_rsp_o_6_ _0946_
+  obi_rsp_o_5_ _0946_
+  obi_rsp_o_2_ _0946_
+  obi_rsp_o_1_ obi_req_i_0_
+Assigns in module soc_ctrl_reg_top$croc_chip.i_croc_soc.i_croc.i_soc_ctrl
+  reg_rsp_o_0_ _235_
+Assigns in module timer_unit$croc_chip.i_croc_soc.i_croc.i_timer
+  r_opc_o _1470_
+  gnt_o _1469_
+Assigns in module reg_uart_wrap$croc_chip.i_croc_soc.i_croc.i_uart
+  reg_rsp_o_33_ _05969_
+  reg_rsp_o_32_ _05969_
+  reg_rsp_o_1_ _05969_
+  reg_rsp_o_10_ _05969_
+  reg_rsp_o_11_ _05969_
+  reg_rsp_o_12_ _05969_
+  reg_rsp_o_13_ _05969_
+  reg_rsp_o_14_ _05969_
+  reg_rsp_o_15_ _05969_
+  reg_rsp_o_16_ _05969_
+  reg_rsp_o_17_ _05969_
+  reg_rsp_o_18_ _05969_
+  reg_rsp_o_19_ _05969_
+  reg_rsp_o_20_ _05969_
+  reg_rsp_o_21_ _05969_
+  reg_rsp_o_22_ _05969_
+  reg_rsp_o_23_ _05969_
+  reg_rsp_o_24_ _05969_
+  reg_rsp_o_25_ _05969_
+  reg_rsp_o_26_ _05969_
+  reg_rsp_o_27_ _05969_
+  reg_rsp_o_28_ _05969_
+  reg_rsp_o_29_ _05969_
+  reg_rsp_o_30_ _05969_
+  reg_rsp_o_31_ _05969_
+Assigns in module croc_domain$croc_chip.i_croc_soc.i_croc
+  user_sbr_obi_req_o_73_ _3688_
+Assigns in module sync$croc_chip.i_croc_soc.i_ext_intr_sync
+  reg_q_1_ serial_o
+Assigns in module user_domain$croc_chip.i_croc_soc.i_user
+  user_sbr_obi_rsp_o_38_ _40_
+  user_sbr_obi_rsp_o_34_ _40_
+  user_sbr_obi_rsp_o_33_ _41_
+  user_sbr_obi_rsp_o_37_ _41_
+  user_sbr_obi_rsp_o_36_ _40_
+  user_sbr_obi_rsp_o_32_ _40_
+  user_sbr_obi_rsp_o_35_ _40_
+  interrupts_o_0_ _41_
+  interrupts_o_1_ _41_
+  interrupts_o_2_ _41_
+  interrupts_o_3_ _41_
+  user_mgr_obi_req_o_0_ _41_
+  user_mgr_obi_req_o_1_ _41_
+  user_mgr_obi_req_o_2_ _41_
+  user_mgr_obi_req_o_3_ _41_
+  user_mgr_obi_req_o_4_ _41_
+  user_mgr_obi_req_o_5_ _41_
+  user_mgr_obi_req_o_6_ _41_
+  user_mgr_obi_req_o_7_ _41_
+  user_mgr_obi_req_o_8_ _41_
+  user_mgr_obi_req_o_9_ _41_
+  user_mgr_obi_req_o_10_ _41_
+  user_mgr_obi_req_o_11_ _41_
+  user_mgr_obi_req_o_12_ _41_
+  user_mgr_obi_req_o_13_ _41_
+  user_mgr_obi_req_o_14_ _41_
+  user_mgr_obi_req_o_15_ _41_
+  user_mgr_obi_req_o_16_ _41_
+  user_mgr_obi_req_o_17_ _41_
+  user_mgr_obi_req_o_18_ _41_
+  user_mgr_obi_req_o_19_ _41_
+  user_mgr_obi_req_o_20_ _41_
+  user_mgr_obi_req_o_21_ _41_
+  user_mgr_obi_req_o_22_ _41_
+  user_mgr_obi_req_o_23_ _41_
+  user_mgr_obi_req_o_24_ _41_
+  user_mgr_obi_req_o_25_ _41_
+  user_mgr_obi_req_o_26_ _41_
+  user_mgr_obi_req_o_27_ _41_
+  user_mgr_obi_req_o_28_ _41_
+  user_mgr_obi_req_o_29_ _41_
+  user_mgr_obi_req_o_30_ _41_
+  user_mgr_obi_req_o_31_ _41_
+  user_mgr_obi_req_o_32_ _41_
+  user_mgr_obi_req_o_33_ _41_
+  user_mgr_obi_req_o_34_ _41_
+  user_mgr_obi_req_o_35_ _41_
+  user_mgr_obi_req_o_36_ _41_
+  user_mgr_obi_req_o_37_ _41_
+  user_mgr_obi_req_o_38_ _41_
+  user_mgr_obi_req_o_39_ _41_
+  user_mgr_obi_req_o_40_ _41_
+  user_mgr_obi_req_o_41_ _41_
+  user_mgr_obi_req_o_42_ _41_
+  user_mgr_obi_req_o_43_ _41_
+  user_mgr_obi_req_o_44_ _41_
+  user_mgr_obi_req_o_45_ _41_
+  user_mgr_obi_req_o_46_ _41_
+  user_mgr_obi_req_o_47_ _41_
+  user_mgr_obi_req_o_48_ _41_
+  user_mgr_obi_req_o_49_ _41_
+  user_mgr_obi_req_o_50_ _41_
+  user_mgr_obi_req_o_51_ _41_
+  user_mgr_obi_req_o_52_ _41_
+  user_mgr_obi_req_o_53_ _41_
+  user_mgr_obi_req_o_54_ _41_
+  user_mgr_obi_req_o_55_ _41_
+  user_mgr_obi_req_o_56_ _41_
+  user_mgr_obi_req_o_57_ _41_
+  user_mgr_obi_req_o_58_ _41_
+  user_mgr_obi_req_o_59_ _41_
+  user_mgr_obi_req_o_60_ _41_
+  user_mgr_obi_req_o_61_ _41_
+  user_mgr_obi_req_o_62_ _41_
+  user_mgr_obi_req_o_63_ _41_
+  user_mgr_obi_req_o_64_ _41_
+  user_mgr_obi_req_o_65_ _41_
+  user_mgr_obi_req_o_66_ _41_
+  user_mgr_obi_req_o_67_ _41_
+  user_mgr_obi_req_o_68_ _41_
+  user_mgr_obi_req_o_69_ _41_
+  user_mgr_obi_req_o_70_ _41_
+  user_mgr_obi_req_o_71_ _41_
+  user_sbr_obi_rsp_o_2_ _41_
+  user_sbr_obi_rsp_o_3_ _40_
+  user_sbr_obi_rsp_o_7_ _41_
+  user_sbr_obi_rsp_o_8_ _40_
+  user_sbr_obi_rsp_o_9_ _40_
+  user_sbr_obi_rsp_o_10_ _40_
+  user_sbr_obi_rsp_o_11_ _40_
+  user_sbr_obi_rsp_o_12_ _41_
+  user_sbr_obi_rsp_o_13_ _41_
+  user_sbr_obi_rsp_o_14_ _41_
+  user_sbr_obi_rsp_o_15_ _40_
+  user_sbr_obi_rsp_o_16_ _40_
+  user_sbr_obi_rsp_o_17_ _41_
+  user_sbr_obi_rsp_o_18_ _40_
+  user_sbr_obi_rsp_o_19_ _41_
+  user_sbr_obi_rsp_o_20_ _40_
+  user_sbr_obi_rsp_o_21_ _41_
+  user_sbr_obi_rsp_o_22_ _40_
+  user_sbr_obi_rsp_o_23_ _41_
+  user_sbr_obi_rsp_o_24_ _41_
+  user_sbr_obi_rsp_o_25_ _40_
+  user_sbr_obi_rsp_o_26_ _40_
+  user_sbr_obi_rsp_o_27_ _40_
+  user_sbr_obi_rsp_o_28_ _41_
+  user_sbr_obi_rsp_o_29_ _40_
+  user_sbr_obi_rsp_o_30_ _40_
+  user_sbr_obi_rsp_o_31_ _41_
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+
+Checking core/die box is on Grid.....
+
+WARNING (IMPFP-7236): DIE's corner: (1640.0000000000 , 1640.0000000000) is NOT on PlacementGrid,  Please use command getFPlanMode to check current Grid settings, use command setFPlanMode to change which grid to snap to. And use command get_snap_grid_info to get grids' offset and pitch. Command floorplan can be used to fix this issue.
+WARNING (IMPFP-7238): CORE's corner: (1460.0000000000 , 1457.8200000000) is NOT on PlacementGrid,  Please use command getFPlanMode to check current Grid settings, use command setFPlanMode to change which grid to snap to. And use command get_snap_grid_info to get grids' offset and pitch. Command floorplan can be used to fix this issue.
+Checking snap rule ......
+
+Checking Row is on grid......
+
+Checking AreaIO row.....
+Checking routing blockage.....
+Checking components.....
+Checking constraints (guide/region/fence).....
+Checking groups.....
+Checking Ptn Core Box.....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+ Design check done.
+Report saved in file checkDesign/croc_chip.main.htm.ascii
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPREPO-227          1  There are %d High Fanout nets (>50).     
+WARNING   IMPREPO-205          1  There are %d Cells with missing PG PIN.  
+WARNING   IMPREPO-207          1  There are %d Cells dimensions not multip...
+WARNING   IMPREPO-210          1  There are %d Cells PG Pins with missing ...
+WARNING   IMPREPO-216          1  There are %d Instances with input pins t...
+*** Message Summary: 5 warning(s), 0 error(s)
+

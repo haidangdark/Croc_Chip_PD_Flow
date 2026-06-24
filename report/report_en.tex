@@ -1,0 +1,358 @@
+% !TEX encoding = UTF-8
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{longtable}
+
+\geometry{left=2.5cm, right=2cm, top=2.5cm, bottom=2.5cm}
+\setlength{\headheight}{13.75pt}
+\addtolength{\topmargin}{-1.6pt}
+
+% Code listing style
+\lstset{
+    language=Tcl,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{gray}\itshape,
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=5pt,
+    breaklines=true,
+    frame=single,
+    rulecolor=\color{black!30},
+    backgroundcolor=\color{gray!5},
+    showstringspaces=false,
+    tabsize=4,
+    captionpos=b
+}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Physical Design Report -- Innovus}
+\fancyhead[R]{\small \thepage}
+
+% Bullet style: use dashes
+\setlist[itemize]{label={--}}
+
+% Title format
+\titleformat{\section}{\Large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection.}{0.5em}{}
+
+\begin{document}
+
+%====================================================================
+% TITLE PAGE
+%====================================================================
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\Huge\bfseries Physical Design Report\\[0.3cm]}
+{\Huge\bfseries Innovus Flow - Academic Project\\[0.5cm]}
+{\Large Design Block: \texttt{croc\_chip}}\\[1cm]
+
+\vspace{1cm}
+{\large
+\begin{tabular}{ll}
+\textbf{Technology:} & IHP SG13G2 (130nm) \\
+\textbf{Target Frequency:} & 100 MHz (10.0 ns period) \\
+\textbf{Clock Uncertainty:} & 0.1 ns \\
+\textbf{EDA Tool:} & Cadence Innovus \\
+\end{tabular}
+}
+
+\vspace{2cm}
+\vfill
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+%====================================================================
+% 1. OVERVIEW AND SETUP
+%====================================================================
+\section{Overview and Setup}
+This report details the physical design (PD) flow for the \texttt{croc\_chip} design block using the IHP SG13G2 technology node.
+
+Timing constraints are defined in the \texttt{constraints.sdc} file, establishing a target frequency of 100 MHz ($T = 10.0$ ns), alongside an uncertainty of 0.1 ns for both setup and hold timing.
+
+\begin{lstlisting}[caption={Timing constraints}]
+set TCK_SYS 10.0
+create_clock -name clk_sys -period $TCK_SYS [get_ports clk_i]
+
+set_clock_uncertainty 0.1 -setup [all_clocks]
+set_clock_uncertainty 0.1 -hold [all_clocks]
+set_clock_transition  0.2 [all_clocks]
+\end{lstlisting}
+
+%====================================================================
+% 2. FLOORPLANNING
+%====================================================================
+\section{Floorplanning (00 \& 01)}
+
+\subsection{Core and Die Sizes}
+The Floorplan stage initializes the core and die dimensions, establishing areas for standard cell placement. A margin of 168 $\mu$m from the core to the die edge is applied to all four sides to reserve space for I/O rings or pads.
+
+\begin{lstlisting}[caption={Floorplan initialization}]
+floorPlan -site CoreSite -d 1840.32 1840.02 168 168 168 168
+\end{lstlisting}
+
+\begin{itemize}
+    \item \textbf{Die Area:} 1840.32 $\times$ 1840.02 $\mu$m
+    \item \textbf{Core Area:} Calculated automatically based on the 168 $\mu$m margins.
+    \item \textbf{Target Utilization:} Approximately 58\%.
+\end{itemize}
+
+\subsection{Routing Layer Constraints}
+The design utilizes metal layers specified in the LEF file. The table below outlines the width, spacing, and pitch specifications for the 7 primary metal layers used for both signal routing and the Power/Ground (PG) mesh.
+
+\begin{table}[H]
+    \centering
+    \caption{Metal Layer constraints from LEF}
+    \label{tab:metal_rules}
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Layer} & \textbf{Direction} & \textbf{Pitch ($\mu$m)} & \textbf{Width ($\mu$m)} & \textbf{Spacing ($\mu$m)} \\
+        \hline
+        Metal1 & Vertical & 0.48 & 0.16 & 0.18 \\
+        Metal2 & Horizontal & 0.42 & 0.20 & 0.22 \\
+        Metal3 & Vertical & 0.48 & 0.20 & 0.22 \\
+        Metal4 & Horizontal & 0.42 & 0.20 & 0.22 \\
+        Metal5 & Vertical & 0.48 & 0.20 & 0.42 \\
+        TopMetal1 & Horizontal & 2.28 & 1.64 & 1.64 \\
+        TopMetal2 & Vertical & 4.00 & 2.00 & 2.00 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Power and Ground (PG) Mesh}
+The Power/Ground (PG) Mesh is constructed on the upper metal layers to ensure stable power distribution. The PG Mesh is designed to route VDD and VSS through Metal3, Metal4, Metal5, TopMetal1, and TopMetal2. The table below specifies the width, set-to-set distance, and spacing for each metal layer:
+
+\begin{table}[H]
+    \centering
+    \caption{PG Mesh specifications}
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Layer} & \textbf{Direction} & \textbf{Width ($\mu$m)} & \textbf{Set-to-set ($\mu$m)} & \textbf{Spacing ($\mu$m)} \\
+        \hline
+        Metal3 & Vertical & 1 & 15 & 2 \\
+        Metal4 & Horizontal & 1 & 15 & 2 \\
+        Metal5 & Vertical & 1 & 15 & 2 \\
+        TopMetal1 & Horizontal & 4 & 30 & 4 \\
+        TopMetal2 & Vertical & 4 & 30 & 4 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+The \texttt{addstripe} commands configure the thickness, direction, distances, and interconnecting vias between these layers.
+
+\begin{lstlisting}[caption={PG Mesh setup}]
+# Metal3 (Vertical)
+setAddStripeMode -reset
+setAddStripeMode -stacked_via_top_layer Metal3 -stacked_via_bottom_layer Metal1 -stapling_nets_style side_to_side
+addstripe -layer Metal3 -direction vertical -nets {VDD VSS} -width 1 -set_to_set_distance 15 -spacing 2 -start 0.5
+
+# Metal4 (Horizontal)
+setAddStripeMode -reset
+setAddStripeMode -stacked_via_top_layer Metal4 -stacked_via_bottom_layer Metal3 -stapling_nets_style side_to_side
+addstripe -layer Metal4 -direction horizontal -nets {VDD VSS} -width 1 -set_to_set_distance 15 -spacing 2 -start 0.5
+
+# Metal5 (Vertical)
+setAddStripeMode -stacked_via_top_layer Metal5 -stacked_via_bottom_layer Metal4 -stapling_nets_style side_to_side
+addstripe -layer Metal5 -direction vertical   -nets {VDD VSS} -width 1 -set_to_set_distance 15 -spacing 2 -start 0.5
+
+# TopMetal1 (Horizontal)
+setAddStripeMode -stacked_via_top_layer TopMetal1 -stacked_via_bottom_layer Metal5 -stapling_nets_style side_to_side
+addstripe -layer TopMetal1 -direction horizontal -nets {VDD VSS} -width 4 -set_to_set_distance 30 -spacing 4 -start 0.5
+
+# TopMetal2 (Vertical)
+setAddStripeMode -stacked_via_top_layer TopMetal2 -stacked_via_bottom_layer TopMetal1 -stapling_nets_style side_to_side
+addstripe -layer TopMetal2 -direction vertical   -nets {VDD VSS} -width 4 -set_to_set_distance 30 -spacing 4
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{pgmesh_metal3.png}
+    \includegraphics[width=0.45\textwidth]{pgmesh_metal4.png}
+    \includegraphics[width=0.45\textwidth]{pgmesh_metal5.png}
+    \includegraphics[width=0.45\textwidth]{pgmesh_topmetal1.png}
+    \includegraphics[width=0.45\textwidth]{pgmesh_topmetal2.png}
+    \caption{PG Mesh across all upper layers (M3, M4, M5, TM1, TM2)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{pgmesh_metal1_rail.png}
+    \includegraphics[width=0.45\textwidth]{00_init+floorplan.png}
+    \caption{Metal1 Power Rails (left) and Full Floorplan (right)}
+\end{figure}
+
+%====================================================================
+% 3. PLACEMENT
+%====================================================================
+\section{Placement (02)}
+
+The Placement stage maps and positions all standard cells and hierarchical logic blocks into the designated rows. Logic blocks interacting with SRAMs are explicitly placed adjacent to their respective SRAM boundaries to optimize routing and minimize wirelength delays.
+
+\begin{lstlisting}[caption={Placement execution and Tie Cells insertion}]
+place_opt_design
+
+setTieHiLoMode -reset
+setTieHiLoMode -cell {sg13g2_tiehi sg13g2_tielo} -maxFanOut 10
+addTieHiLo -cell {sg13g2_tiehi sg13g2_tielo} -prefix TIE
+\end{lstlisting}
+
+\subsection{SRAM and Logic Block Placement}
+The figures below illustrate the logic blocks (highlighted colored cells) optimally placed near their corresponding SRAM blocks. The SRAM blocks are also encapsulated by placement blockages (Halos) to prevent DRC violations.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{sram_nearly_std_same_logic_1.png}
+    \includegraphics[width=0.45\textwidth]{sram_nearly_std_same_logic_2.png}
+    \includegraphics[width=0.45\textwidth]{sram_place_halo.png}
+    \caption{SRAM placement, adjacent logic cells, and Halo regions}
+\end{figure}
+
+\subsection{Redundant Buffer Removal (ECO)}
+Post-placement timing reports indicated the presence of 9 redundant buffers that negatively impacted the critical paths. These timing violations were manually rectified using ECO (Engineering Change Order) commands by explicitly deleting the redundant instances in batch mode.
+
+\begin{lstlisting}[caption={Redundant buffer removal (ECO script)}]
+setEcoMode -batchMode true
+ecoDeleteRepeater -inst <ten_instance_buffer_1>
+ecoDeleteRepeater -inst <ten_instance_buffer_2>
+# ... repeat to remove all 9 redundant buffers ...
+setEcoMode -batchMode false
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{02_placement.png}
+    \caption{Full chip overview after Placement}
+\end{figure}
+
+\subsection{Post-Placement Timing Report}
+The table below summarizes the timing results following placement (internal timing paths only). Paths involving I/O ports have been excluded. At this stage, the \texttt{reg2reg} path exhibits a slight negative slack (WNS = -0.033 ns).
+
+\begin{table}[H]
+    \centering
+    \caption{Internal Timing Summary (Post-Placement)}
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Path Type} & \textbf{WNS (ns)} & \textbf{TNS (ns)} & \textbf{Violating Paths (Vio)} \\
+        \hline
+        \textbf{reg $\rightarrow$ reg} & -0.033 & -0.366 & 33 \\
+        \textbf{reg $\rightarrow$ mem} & 0.719 & 0.000 & 0 \\
+        \textbf{mem $\rightarrow$ reg} & 0.054 & 0.000 & 0 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+%====================================================================
+% 4. CLOCK TREE SYNTHESIS
+%====================================================================
+\section{Clock Tree Synthesis (CTS - 03 \& 04)}
+
+CTS is the phase where the clock distribution network is synthesized to deliver the clock signal to all sequential elements (registers) with minimum skew and balanced latency. The \texttt{optDesign -postCTS} command performs further optimization, effectively driving the \texttt{reg2reg} timing slack to a positive value.
+
+\begin{lstlisting}[caption={CTS Execution and Optimization}]
+clockDesign -outDir ../rpt/${STAGE}/${STAGE}_clk
+optDesign -postCTS
+optDesign -postCTS -hold
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{03_cts.png}
+    \caption{Clock Tree Routing visualization}
+\end{figure}
+
+\subsection{Post-CTS Timing Report}
+The results from \texttt{optDesign} post-CTS demonstrate successful optimization, as there are no longer any violating paths in the \texttt{reg2reg} domain (WNS is positive). Any remaining violations (such as the -2.700 ns WNS seen in the overall summary) are strictly constrained to I/O communications.
+
+\begin{table}[H]
+    \centering
+    \caption{Internal Timing Summary (Post-CTS)}
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Path Type} & \textbf{WNS (ns)} & \textbf{TNS (ns)} & \textbf{Violating Paths (Vio)} \\
+        \hline
+        \textbf{reg $\rightarrow$ reg} & 0.001 & 0.000 & 0 \\
+        \textbf{reg $\rightarrow$ mem} & 0.638 & 0.000 & 0 \\
+        \textbf{mem $\rightarrow$ reg} & 0.044 & 0.000 & 0 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+%====================================================================
+% 5. ROUTING
+%====================================================================
+\section{Routing (05 \& 06)}
+
+The Innovus NanoRoute engine executes both Global and Detailed Routing. Based on the \texttt{config.tcl} specifications, the available routing layers are strictly constrained from \texttt{Metal1} up to \texttt{Metal5}. This constraint fully dedicates the uppermost layers, \texttt{TopMetal1} and \texttt{TopMetal2}, to the Power/Ground (PG) Mesh.
+
+\begin{lstlisting}[caption={Routing layer constraints}]
+setDesignMode -topRoutingLayer Metal5
+setDesignMode -bottomRoutingLayer Metal1
+\end{lstlisting}
+
+Additionally, the NanoRoute configuration enables timing-driven routing and mitigates signal integrity issues (SI-driven).
+
+\begin{lstlisting}[caption={NanoRoute configuration and execution}]
+setNanoRouteMode -quiet -routeWithTimingDriven 1
+setNanoRouteMode -quiet -routeWithSiDriven 1
+setNanoRouteMode -routeExpAdvancedPinAccess 2
+routeDesign -globalDetail
+\end{lstlisting}
+
+\subsection{Useful Skew Optimization}
+To resolve the final timing violations during the post-route stage, \textbf{Useful Skew} optimization was enabled in the \texttt{optDesign -postRoute} command. Instead of strictly enforcing simultaneous clock arrivals, Useful Skew intentionally advances or delays the clock at specific endpoints, effectively "borrowing" time to compensate for data path delays.
+
+\begin{lstlisting}[caption={Useful Skew in Post-Route Optimization}]
+setOptMode -usefulSkew true
+setOptMode -usefulSkewPostRoute true
+setOptMode -addInstancePrefix ictc_postRoute_extra_
+optDesign -postRoute
+optDesign -postRoute -hold
+\end{lstlisting}
+
+\subsection{Metal Layers and Finishing}
+The images below illustrate the individual routing metal layers and the insertion of Filler cells to bridge gaps between standard cells, thus preventing DRC well violations.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{routing_metal_1.png}
+    \includegraphics[width=0.45\textwidth]{routing_metal_2.png}
+    \includegraphics[width=0.45\textwidth]{routing_metal_3.png}
+    \includegraphics[width=0.45\textwidth]{routing_metal_4.png}
+    \includegraphics[width=0.45\textwidth]{routing_metal_5.png}
+    \includegraphics[width=0.45\textwidth]{via.png}
+    \caption{Routing progressively from M1 $\rightarrow$ M5 and Vias}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{fillercell_added.png}
+    \includegraphics[width=0.48\textwidth]{full_chip.png}
+    \caption{Filler Cells insertion (left) and final chip overview (right)}
+\end{figure}
+
+\end{document}

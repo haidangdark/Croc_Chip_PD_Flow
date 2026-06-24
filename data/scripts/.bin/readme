@@ -1,0 +1,7 @@
+##################################
+to practice check PG missing via, PG short, sram missing PG, restore database in dbs folder by command:
+
+restoreDesign ../dbs/00_init_design_PG_check.invs.dat/ croc_chip
+
+Do verify PG follow commands in 00_init_design.tcl file
+Note: stand in pr folder to restore dbs

@@ -1,0 +1,94 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+# /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+# /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib
+# /ictc/teacher_data/ictc_mynguyen/pd_bak/ictc_mynguyen/.volare/volare/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib
+create_op_cond -name BCCOM\
+   -library_file [list /ictc/student_data/share/pd/data/user_setting/backup/sg13g2_stdcell_fast_1p32V_m40C.lib ] \
+   -P {1.0}\
+   -V {1.32}\
+   -T {-40.0}
+create_op_cond -name WCCOM\
+   -library_file [ list /ictc/student_data/share/pd/data/user_setting/backup/sg13g2_stdcell_slow_1p08V_125C.lib] \
+   -P {1.0}\
+   -V {1.08}\
+   -T {100.0}
+create_op_cond -name TCCOM\
+   -library_file [ list /ictc/student_data/share/pd/data/user_setting/backup/sg13g2_stdcell_typ_1p20V_25C.lib] \
+   -P {1.0}\
+   -V {1.20}\
+   -T {25.0}
+create_library_set -name sky130_bc\
+   -timing\
+	[list /ictc/student_data/share/pd/data/user_setting/backup/sg13g2_stdcell_fast_1p32V_m40C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/sg13g2_io_fast_1p32V_3p6V_m40C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/sg13g2_io_fast_1p65V_3p6V_m40C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_2048x64_c2_bm_bist_fast_1p32V_m55C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_4096x16_c3_bm_bist_fast_1p32V_m55C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_64x64_c2_bm_bist_fast_1p32V_m55C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_1024x8_c2_bm_bist_fast_1p32V_m55C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_256x64_c2_bm_bist_fast_1p32V_m55C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_256x48_c2_bm_bist_fast_1p32V_m55C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_1024x64_c2_bm_bist_fast_1p32V_m55C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_4096x8_c3_bm_bist_fast_1p32V_m55C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_1024x16_c2_bm_bist_fast_1p32V_m55C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_512x64_c2_bm_bist_fast_1p32V_m55C.lib ]
+create_library_set -name sky130_wc\
+   -timing\
+    	[list /ictc/student_data/share/pd/data/user_setting/backup/sg13g2_stdcell_slow_1p08V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/sg13g2_io_slow_1p35V_3p0V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/sg13g2_io_slow_1p08V_3p0V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_1024x64_c2_bm_bist_slow_1p08V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_2048x64_c2_bm_bist_slow_1p08V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_4096x8_c3_bm_bist_slow_1p08V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_1024x16_c2_bm_bist_slow_1p08V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_256x48_c2_bm_bist_slow_1p08V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_512x64_c2_bm_bist_slow_1p08V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_256x64_c2_bm_bist_slow_1p08V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_1024x8_c2_bm_bist_slow_1p08V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_4096x16_c3_bm_bist_slow_1p08V_125C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_64x64_c2_bm_bist_slow_1p08V_125C.lib ]
+create_library_set -name sky130_tc\
+   -timing\
+    	[list /ictc/student_data/share/pd/data/user_setting/backup/sg13g2_stdcell_typ_1p20V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/sg13g2_io_typ_1p2V_3p3V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/sg13g2_io_typ_1p5V_3p3V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_256x48_c2_bm_bist_typ_1p20V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_1024x64_c2_bm_bist_typ_1p20V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_4096x16_c3_bm_bist_typ_1p20V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_1024x16_c2_bm_bist_typ_1p20V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_512x64_c2_bm_bist_typ_1p20V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_2048x64_c2_bm_bist_typ_1p20V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_4096x8_c3_bm_bist_typ_1p20V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_1024x8_c2_bm_bist_typ_1p20V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_64x64_c2_bm_bist_typ_1p20V_25C.lib \
+	/ictc/student_data/share/pd/data/user_setting/backup/RM_IHPSG13_1P_256x64_c2_bm_bist_typ_1p20V_25C.lib ]
+
+create_constraint_mode -name func_mode_ideal_wc\
+   -sdc_files {/ictc/student_data/share/pd/data/user_setting/backup/constraints.sdc}
+create_constraint_mode -name func_mode_ideal_bc\
+   -sdc_files {/ictc/student_data/share/pd/data/user_setting/backup/constraints.sdc}
+create_constraint_mode -name func_mode_prop\
+   -sdc_files {/ictc/student_data/share/pd/data/user_setting/backup/constraints.sdc}
+create_delay_corner -name delay_bc\
+   -library_set {sky130_bc}\
+   -opcond {BCCOM}
+create_delay_corner -name delay_wc\
+   -library_set {sky130_wc}\
+   -opcond {WCCOM}
+create_delay_corner -name delay_tc\
+   -library_set {sky130_tc}\
+   -opcond {TCCOM}
+create_analysis_view -name func_view_wc\
+   -constraint_mode {func_mode_ideal_wc}\
+   -delay_corner {delay_wc}
+create_analysis_view -name func_view_bc\
+   -constraint_mode {func_mode_ideal_bc}\
+   -delay_corner {delay_bc}
+create_analysis_view -name func_view_tc\
+   -constraint_mode {func_mode_ideal_wc}\
+   -delay_corner {delay_tc}
+
+set_analysis_view\
+   -setup {func_view_wc}\
+   -hold {func_view_bc}

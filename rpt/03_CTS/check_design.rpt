@@ -1,0 +1,455 @@
+**WARN: (IMPREPO-205):	There are 1 Cells with missing PG PIN.
+**WARN: (IMPREPO-207):	There are 2 Cells dimensions not multiple integer of site.
+**WARN: (IMPREPO-210):	There are 30 Cells PG Pins with missing geometry.
+**Info: (IMPSP-307): Design contains fractional 1 cell.
+Begin checking placement ... (start mem=3486.4M, init mem=3486.4M)
+Overlapping with other instance:	2
+Pre-route DRC Violation:	200
+*info: Recommended don't use cell = 0           
+*info: Placed = 45545          (Fixed = 8201)
+*info: Unplaced = 0           
+Placement Density:56.29%(612531/1088259)
+Placement Density (including fixed std cells):56.94%(629140/1104869)
+Finished checkPlace (total: cpu=0:00:01.5, real=0:00:00.0; vio checks: cpu=0:00:01.0, real=0:00:00.0; mem=3486.4M)
+############################################################################
+# Innovus Netlist Design Rule Check
+# Tue Jun 16 12:10:30 2026
+
+############################################################################
+Design: croc_chip
+
+------ Design Summary:
+Total Standard Cell Number   (cells) : 45543
+Total Block Cell Number      (cells) : 2
+Total I/O Pad Cell Number    (cells) : 64
+Total Standard Cell Area     ( um^2) : 629140.48
+Total Block Cell Area        ( um^2) : 186361.07
+Total I/O Pad Cell Area      ( um^2) : 921600.00
+
+------ Design Statistics:
+
+Number of Instances            : 45609
+Number of Non-uniquified Insts : 45609
+Number of Nets                 : 44287
+Average number of Pins per Net : 3.10
+Maximum number of Pins in Net  : 76
+
+------ I/O Port summary
+
+Number of Primary I/O Ports    : 48
+Number of Input Ports          : 9
+Number of Output Ports         : 7
+Number of Bidirectional Ports  : 32
+Number of Power/Ground Ports   : 0
+Number of Floating Ports                     *: 0
+Number of Ports Connected to Multiple Pads   *: 0
+Number of Ports Connected to Core Instances   : 0
+
+------ Design Rule Checking:
+
+Number of Output Pins connect to Power/Ground *: 0
+Number of Insts with Input Pins tied together ?: 102
+Number of TieHi/Lo term nets not connected to instance's PG terms ?: 0
+Number of Input/InOut Floating Pins            : 0
+Number of Output Floating Pins                 : 0
+Number of Output Term Marked TieHi/Lo         *: 0
+
+**WARN: (IMPREPO-216):	There are 102 Instances with input pins tied together.
+Number of nets with tri-state drivers          : 32
+Number of nets with parallel drivers           : 0
+Number of nets with multiple drivers           : 0
+Number of nets with no driver (No FanIn)       : 0
+Number of Output Floating nets (No FanOut)     : 5840
+Number of High Fanout nets (>50)               : 37
+**WARN: (IMPREPO-227):	There are 37 High Fanout nets (>50).
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadIn' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadIn' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (IMPREPO-231):	Input netlist has a cell 'sg13g2_IOPadInOut30mA' which is marked dont_use in the library. This cell will not be used in timing optimization. Use set_dont_use command to change. Instances of this cell are : <output of dbGet top.insts.cell.name <the cell> -p2
+**WARN: (EMS-27):	Message (IMPREPO-231) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+
+# Number of cells of input netlist marked dont_use = 64.
+
+Checking for any assigns in the netlist...
+Assigns in module cve2_cs_registers$croc_chip_i_croc_soc_i_croc_i_core_wrap_i_ibex_cs_registers_i
+  csr_pmp_cfg_o_0_ _3288_
+  csr_pmp_cfg_o_1_ _3288_
+  csr_pmp_cfg_o_2_ _3288_
+  csr_pmp_cfg_o_3_ _3288_
+  csr_pmp_cfg_o_4_ _3288_
+  csr_pmp_cfg_o_5_ _3288_
+  csr_pmp_cfg_o_6_ _3288_
+  csr_pmp_cfg_o_7_ _3288_
+  csr_pmp_cfg_o_8_ _3288_
+  csr_pmp_cfg_o_9_ _3288_
+  csr_pmp_cfg_o_10_ _3288_
+  csr_pmp_cfg_o_11_ _3288_
+  csr_pmp_cfg_o_12_ _3288_
+  csr_pmp_cfg_o_13_ _3288_
+  csr_pmp_cfg_o_14_ _3288_
+  csr_pmp_cfg_o_15_ _3288_
+  csr_pmp_cfg_o_16_ _3288_
+  csr_pmp_cfg_o_17_ _3288_
+  csr_pmp_cfg_o_18_ _3288_
+  csr_pmp_cfg_o_19_ _3288_
+  csr_pmp_cfg_o_20_ _3288_
+  csr_pmp_cfg_o_21_ _3288_
+  csr_pmp_cfg_o_22_ _3288_
+  csr_pmp_cfg_o_23_ _3288_
+  csr_pmp_addr_o_0_ _3288_
+  csr_pmp_addr_o_1_ _3288_
+  csr_pmp_addr_o_2_ _3288_
+  csr_pmp_addr_o_3_ _3288_
+  csr_pmp_addr_o_4_ _3288_
+  csr_pmp_addr_o_5_ _3288_
+  csr_pmp_addr_o_6_ _3288_
+  csr_pmp_addr_o_7_ _3288_
+  csr_pmp_addr_o_8_ _3288_
+  csr_pmp_addr_o_9_ _3288_
+  csr_pmp_addr_o_10_ _3288_
+  csr_pmp_addr_o_11_ _3288_
+  csr_pmp_addr_o_12_ _3288_
+  csr_pmp_addr_o_13_ _3288_
+  csr_pmp_addr_o_14_ _3288_
+  csr_pmp_addr_o_15_ _3288_
+  csr_pmp_addr_o_16_ _3288_
+  csr_pmp_addr_o_17_ _3288_
+  csr_pmp_addr_o_18_ _3288_
+  csr_pmp_addr_o_19_ _3288_
+  csr_pmp_addr_o_20_ _3288_
+  csr_pmp_addr_o_21_ _3288_
+  csr_pmp_addr_o_22_ _3288_
+  csr_pmp_addr_o_23_ _3288_
+  csr_pmp_addr_o_24_ _3288_
+  csr_pmp_addr_o_25_ _3288_
+  csr_pmp_addr_o_26_ _3288_
+  csr_pmp_addr_o_27_ _3288_
+  csr_pmp_addr_o_28_ _3288_
+  csr_pmp_addr_o_29_ _3288_
+  csr_pmp_addr_o_30_ _3288_
+  csr_pmp_addr_o_31_ _3288_
+  csr_pmp_addr_o_32_ _3288_
+  csr_pmp_addr_o_33_ _3288_
+  csr_pmp_addr_o_34_ _3288_
+  csr_pmp_addr_o_35_ _3288_
+  csr_pmp_addr_o_36_ _3288_
+  csr_pmp_addr_o_37_ _3288_
+  csr_pmp_addr_o_38_ _3288_
+  csr_pmp_addr_o_39_ _3288_
+  csr_pmp_addr_o_40_ _3288_
+  csr_pmp_addr_o_41_ _3288_
+  csr_pmp_addr_o_42_ _3288_
+  csr_pmp_addr_o_43_ _3288_
+  csr_pmp_addr_o_44_ _3288_
+  csr_pmp_addr_o_45_ _3288_
+  csr_pmp_addr_o_46_ _3288_
+  csr_pmp_addr_o_47_ _3288_
+  csr_pmp_addr_o_48_ _3288_
+  csr_pmp_addr_o_49_ _3288_
+  csr_pmp_addr_o_50_ _3288_
+  csr_pmp_addr_o_51_ _3288_
+  csr_pmp_addr_o_52_ _3288_
+  csr_pmp_addr_o_53_ _3288_
+  csr_pmp_addr_o_54_ _3288_
+  csr_pmp_addr_o_55_ _3288_
+  csr_pmp_addr_o_56_ _3288_
+  csr_pmp_addr_o_57_ _3288_
+  csr_pmp_addr_o_58_ _3288_
+  csr_pmp_addr_o_59_ _3288_
+  csr_pmp_addr_o_60_ _3288_
+  csr_pmp_addr_o_61_ _3288_
+  csr_pmp_addr_o_62_ _3288_
+  csr_pmp_addr_o_63_ _3288_
+  csr_pmp_addr_o_64_ _3288_
+  csr_pmp_addr_o_65_ _3288_
+  csr_pmp_addr_o_66_ _3288_
+  csr_pmp_addr_o_67_ _3288_
+  csr_pmp_addr_o_68_ _3288_
+  csr_pmp_addr_o_69_ _3288_
+  csr_pmp_addr_o_70_ _3288_
+  csr_pmp_addr_o_71_ _3288_
+  csr_pmp_addr_o_72_ _3288_
+  csr_pmp_addr_o_73_ _3288_
+  csr_pmp_addr_o_74_ _3288_
+  csr_pmp_addr_o_75_ _3288_
+  csr_pmp_addr_o_76_ _3288_
+  csr_pmp_addr_o_77_ _3288_
+  csr_pmp_addr_o_78_ _3288_
+  csr_pmp_addr_o_79_ _3288_
+  csr_pmp_addr_o_80_ _3288_
+  csr_pmp_addr_o_81_ _3288_
+  csr_pmp_addr_o_82_ _3288_
+  csr_pmp_addr_o_83_ _3288_
+  csr_pmp_addr_o_84_ _3288_
+  csr_pmp_addr_o_85_ _3288_
+  csr_pmp_addr_o_86_ _3288_
+  csr_pmp_addr_o_87_ _3288_
+  csr_pmp_addr_o_88_ _3288_
+  csr_pmp_addr_o_89_ _3288_
+  csr_pmp_addr_o_90_ _3288_
+  csr_pmp_addr_o_91_ _3288_
+  csr_pmp_addr_o_92_ _3288_
+  csr_pmp_addr_o_93_ _3288_
+  csr_pmp_addr_o_94_ _3288_
+  csr_pmp_addr_o_95_ _3288_
+  csr_pmp_addr_o_96_ _3288_
+  csr_pmp_addr_o_97_ _3288_
+  csr_pmp_addr_o_98_ _3288_
+  csr_pmp_addr_o_99_ _3288_
+  csr_pmp_addr_o_100_ _3288_
+  csr_pmp_addr_o_101_ _3288_
+  csr_pmp_addr_o_102_ _3288_
+  csr_pmp_addr_o_103_ _3288_
+  csr_pmp_addr_o_104_ _3288_
+  csr_pmp_addr_o_105_ _3288_
+  csr_pmp_addr_o_106_ _3288_
+  csr_pmp_addr_o_107_ _3288_
+  csr_pmp_addr_o_108_ _3288_
+  csr_pmp_addr_o_109_ _3288_
+  csr_pmp_addr_o_110_ _3288_
+  csr_pmp_addr_o_111_ _3288_
+  csr_pmp_addr_o_112_ _3288_
+  csr_pmp_addr_o_113_ _3288_
+  csr_pmp_addr_o_114_ _3288_
+  csr_pmp_addr_o_115_ _3288_
+  csr_pmp_addr_o_116_ _3288_
+  csr_pmp_addr_o_117_ _3288_
+  csr_pmp_addr_o_118_ _3288_
+  csr_pmp_addr_o_119_ _3288_
+  csr_pmp_addr_o_120_ _3288_
+  csr_pmp_addr_o_121_ _3288_
+  csr_pmp_addr_o_122_ _3288_
+  csr_pmp_addr_o_123_ _3288_
+  csr_pmp_addr_o_124_ _3288_
+  csr_pmp_addr_o_125_ _3288_
+  csr_pmp_addr_o_126_ _3288_
+  csr_pmp_addr_o_127_ _3288_
+  csr_pmp_addr_o_128_ _3288_
+  csr_pmp_addr_o_129_ _3288_
+  csr_pmp_addr_o_130_ _3288_
+  csr_pmp_addr_o_131_ _3288_
+  csr_pmp_addr_o_132_ _3288_
+  csr_pmp_addr_o_133_ _3288_
+  csr_pmp_addr_o_134_ _3288_
+  csr_pmp_addr_o_135_ _3288_
+  csr_pmp_mseccfg_o_0_ _3288_
+  csr_pmp_mseccfg_o_1_ _3288_
+  csr_pmp_mseccfg_o_2_ _3288_
+Assigns in module core_wrap$croc_chip_i_croc_soc_i_croc_i_core_wrap
+  p3 data_addr_o_13_
+  instr_addr_o_0_ _4950_
+Assigns in module dm_top$croc_chip_i_croc_soc_i_croc_i_dm_top_i_dm_top
+  FE_OFN206_i_dm_top_master_addr_o_2 master_add_o_2_
+  FE_OFN204_FE_OFN508_i_dm_top_master_addr_o_1 master_add_o_1_
+  FE_OFN207_n master_add_o_3_
+  p5 master_add_o_5_
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_a_i_state_transition_cdc_dst_i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_dst$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_a_i_state_transition_cdc_dst
+  data_o_1_ async_data_i_1_
+  data_o_0_ async_data_i_0_
+  ack_dst_q async_ack_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_a_i_state_transition_cdc_src_i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_src$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_a_i_state_transition_cdc_src
+  req_src_q async_req_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_b_i_state_transition_cdc_dst_i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_dst$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_b_i_state_transition_cdc_dst
+  ack_dst_q async_ack_o
+  data_o_0_ async_data_i_0_
+  data_o_1_ async_data_i_1_
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_b_i_state_transition_cdc_src_i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_src$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_b_i_state_transition_cdc_src
+  req_src_q async_req_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_dst_i_sync
+  reg_q_2_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_src_i_sync
+  reg_q_2_ serial_o
+Assigns in module cdc_2phase_src_clearable$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_req_i_src
+  req_src_q async_req_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_a_i_state_transition_cdc_dst_i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_dst$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_a_i_state_transition_cdc_dst
+  data_o_1_ async_data_i_1_
+  data_o_0_ async_data_i_0_
+  ack_dst_q async_ack_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_a_i_state_transition_cdc_src_i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_src$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_a_i_state_transition_cdc_src
+  req_src_q async_req_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_b_i_state_transition_cdc_dst_i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_dst$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_b_i_state_transition_cdc_dst
+  data_o_1_ async_data_i_1_
+  data_o_0_ async_data_i_0_
+  ack_dst_q async_ack_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_b_i_state_transition_cdc_src_i_sync
+  reg_q_1_ serial_o
+Assigns in module cdc_4phase_src$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_cdc_reset_ctrlr_i_cdc_reset_ctrlr_half_b_i_state_transition_cdc_src
+  req_src_q async_req_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_dst_i_sync
+  reg_q_2_ serial_o
+Assigns in module cdc_2phase_dst_clearable$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_dst
+  ack_dst_q async_ack_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_src_i_sync
+  reg_q_2_ serial_o
+Assigns in module cdc_2phase_src_clearable$croc_chip_i_croc_soc_i_croc_i_dmi_jtag_i_dmi_cdc_i_cdc_resp_i_src
+  req_src_q async_req_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_0__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_10__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_11__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_12__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_13__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_14__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_15__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_16__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_17__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_18__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_19__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_1__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_20__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_21__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_22__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_23__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_24__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_25__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_26__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_27__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_28__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_29__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_2__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_30__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_31__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_3__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_4__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_5__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_6__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_7__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_8__i_sync
+  reg_q_1_ serial_o
+Assigns in module sync$croc_chip_i_croc_soc_i_croc_i_gpio_gen_gpios_9__i_sync
+  reg_q_1_ serial_o
+Assigns in module gpio$croc_chip_i_croc_soc_i_croc_i_gpio
+  obi_rsp_o_6_ _0946_
+  obi_rsp_o_5_ _0946_
+  obi_rsp_o_2_ _0946_
+Assigns in module soc_ctrl_reg_top$croc_chip_i_croc_soc_i_croc_i_soc_ctrl
+  reg_rsp_o_0_ _235_
+Assigns in module timer_unit$croc_chip_i_croc_soc_i_croc_i_timer
+  gnt_o _1469_
+Assigns in module reg_uart_wrap$croc_chip_i_croc_soc_i_croc_i_uart
+  reg_rsp_o_33_ _05969_
+  reg_rsp_o_32_ _05969_
+  reg_rsp_o_1_ _05969_
+  reg_rsp_o_10_ _05969_
+  reg_rsp_o_11_ _05969_
+  reg_rsp_o_12_ _05969_
+  reg_rsp_o_13_ _05969_
+  reg_rsp_o_14_ _05969_
+  reg_rsp_o_15_ _05969_
+  reg_rsp_o_16_ _05969_
+  reg_rsp_o_17_ _05969_
+  reg_rsp_o_18_ _05969_
+  reg_rsp_o_19_ _05969_
+  reg_rsp_o_20_ _05969_
+  reg_rsp_o_21_ _05969_
+  reg_rsp_o_22_ _05969_
+  reg_rsp_o_23_ _05969_
+  reg_rsp_o_24_ _05969_
+  reg_rsp_o_25_ _05969_
+  reg_rsp_o_26_ _05969_
+  reg_rsp_o_27_ _05969_
+  reg_rsp_o_28_ _05969_
+  reg_rsp_o_29_ _05969_
+  reg_rsp_o_30_ _05969_
+  reg_rsp_o_31_ _05969_
+Assigns in module croc_domain$croc_chip_i_croc_soc_i_croc
+  FE_RN_7 _3688_
+Assigns in module sync$croc_chip_i_croc_soc_i_ext_intr_sync
+  reg_q_1_ serial_o
+Assigns in module user_domain$croc_chip_i_croc_soc_i_user
+  user_sbr_obi_rsp_o_11_ _40_
+  user_sbr_obi_rsp_o_24_ _41_
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+
+Checking core/die box is on Grid.....
+
+WARNING (IMPFP-7238): CORE's corner: (348.0000000000 , 348.0000000000) is NOT on PlacementGrid,  Please use command getFPlanMode to check current Grid settings, use command setFPlanMode to change which grid to snap to. And use command get_snap_grid_info to get grids' offset and pitch. Command floorplan can be used to fix this issue.
+WARNING (IMPFP-7238): CORE's corner: (1492.3200000000 , 1492.0200000000) is NOT on PlacementGrid,  Please use command getFPlanMode to check current Grid settings, use command setFPlanMode to change which grid to snap to. And use command get_snap_grid_info to get grids' offset and pitch. Command floorplan can be used to fix this issue.
+Checking snap rule ......
+
+Checking Row is on grid......
+
+Checking AreaIO row.....
+Checking routing blockage.....
+Checking components.....
+Checking constraints (guide/region/fence).....
+Checking groups.....
+Checking Ptn Core Box.....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+ Design check done.
+Report saved in file checkDesign/croc_chip.main.htm.ascii
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPREPO-227          1  There are %d High Fanout nets (>50).     
+WARNING   IMPREPO-231         64  Input netlist has a cell '%s' which is m...
+WARNING   IMPREPO-205          1  There are %d Cells with missing PG PIN.  
+WARNING   IMPREPO-207          1  There are %d Cells dimensions not multip...
+WARNING   IMPREPO-210          1  There are %d Cells PG Pins with missing ...
+WARNING   IMPREPO-216          1  There are %d Instances with input pins t...
+*** Message Summary: 69 warning(s), 0 error(s)
+

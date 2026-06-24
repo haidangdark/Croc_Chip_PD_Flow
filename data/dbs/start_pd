@@ -1,0 +1,6 @@
+#!/bin/csh
+#set log_name = $1
+set log_name = "PD1"
+set timestamp = `date "+%Y%m%d_%H%M%S"`
+set logfile = "./log/${log_name}_${timestamp}.log"
+start_pd -log $logfile -files /ictc/student_data/share/pd/data/scripts/update_timing_format.tcl
